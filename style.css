@@ -1,0 +1,98 @@
+body {
+  font-size: 85%;
+}
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+li {
+  list-style: none;
+  float: left;
+}
+#results {
+  width: 550px;
+  margin: 25px 0 0 5px;
+  float: left;
+  font-size: 85%;
+  font: 'Courier New';
+}
+#wrapper {
+  float: left;
+  margin-top: 35px;
+  overflow: hidden;
+  width: 222px;
+  height: 222px;
+}
+ul#prevImg {
+  margin-top: 20px;
+  width: 250px;
+  float: right; 
+}
+ul#prevImg li {
+  width: 100px;
+  padding: 4px;
+  margin: 4px 4px 2px 0;
+  border: 1px solid #ddd;
+}
+#featImg { 
+  margin: 10px;
+  position: relative;
+  background-repeat: no-repeat;
+}
+#featImg, img, #overlay {
+  border-radius: 8px; -webkit-border-radius: 8px; -moz-border-radius: 8px;
+}
+h1,h2,h3 {
+  color: #000;
+  font-family: 'Montez', cursive;
+  padding: 2px 5px;
+  background-color: rgba(255, 255, 255, .7); 
+  z-index: 800;
+}
+h1#blogtitle {
+  position: absolute;
+}
+#formWrapper {
+  float: left; 
+  margin: 20px;
+}
+form {
+  overflow: hidden;
+  border-right: 1px solid #ddd;
+  padding: 10px 20px 10px 0;
+  width: 500px;
+}
+label {
+  clear: both;
+  float: left;
+  margin: 5px;
+  width: 170px;
+  padding-top: 5px;
+}
+input, select {
+  border: 1px solid #ddd;
+  margin: 5px;
+  width: 300px;
+  height: 22px;
+  float: right;
+}
+select, .smallInput {
+  width: 146px; 
+}
+input#storeLink {
+  width: 20px; 
+  height: 20px; 
+  float: left; 
+  margin: 10px 0 0 15px;  
+}
+input#create {
+  margin-top: -20px;
+  border-radius: 8px; -webkit-border-radius: 8px; -moz-border-radius: 8px;
+  border: none;
+  height: 30px;
+  color: #fff;
+  background-color: #900;
+  clear: both;
+  float: right; 
+  width: 100px;
+}
