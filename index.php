@@ -35,8 +35,8 @@ include 'formsubmit.php';
     </ul>
   </div>
 
-  <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
-  <script type="text/javascript" src="js/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
   <script type="text/javascript" src="js/colorpicker/js/colorpicker.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
 

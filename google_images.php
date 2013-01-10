@@ -1,9 +1,15 @@
 <?php
+# modified script from https://developers.google.com/image-search/v1/jsondevguide
 $mysite = "http://bobbelderbos.com";
-echo $_SERVER['HTTP_CLIENT_IP']; 
-exit;
+$search = urlencode($_GET["term"]);
+$ip =  gethostbyname(gethostname());
+$filetype = "png";
+$imagesize = "small|medium|large|xlarge";
+$numresults = "8";
 $url = "https://ajax.googleapis.com/ajax/services/search/images?" .
-       "v=1.0&q=barack%20obama&userip=INSERT-USER-IP";
+       "v=1.0&q=$search&userip=$ip&as_filetype=$filetype&imgsz=$imagesize&rsz=$numresults";
+#echo $url;
+$return_arr = array();
 
 // sendRequest
 // note how referer is set manually
@@ -16,4 +22,17 @@ curl_close($ch);
 
 // now, process the JSON string
 $json = json_decode($body);
-// now have some fun with the results...
+# echo "<pre>"; print_r($json->responseData->results); echo "</pre>"; exit;
+
+$entry = array();
+$counter = 0;
+foreach($json->responseData->results as $img){
+  $counter++;
+  $entry['id'] = $counter; # smaller pic
+  $entry['url'] = $img->tbUrl; # smaller pic
+  $entry['url_big'] = $img->url; # big img
+  array_push($return_arr, $entry); 
+}
+
+$json = json_encode($return_arr);
+echo $json;
