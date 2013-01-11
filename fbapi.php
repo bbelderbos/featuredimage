@@ -15,7 +15,11 @@
  * under the License.
  */
 require 'facebook-php-sdk/src/facebook.php';
-require 'fbkey.php'; # instantiates the fb app (app id + secret)
+if(file_exists($f = 'fbkey.php')){
+  require($f);
+} else {
+  throw new Exception("Could not find file {$f}");
+}
 
 // Get User ID
 $user = $facebook->getUser();
