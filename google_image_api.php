@@ -23,16 +23,4 @@ curl_close($ch);
 // now, process the JSON string
 $json = json_decode($body);
 # echo "<pre>"; print_r($json->responseData->results); echo "</pre>"; exit;
-
-$entry = array();
-$counter = 0;
-foreach($json->responseData->results as $img){
-  $counter++;
-  $entry['id'] = $counter; # smaller pic
-  $entry['url'] = $img->tbUrl; # smaller pic
-  $entry['url_big'] = $img->url; # big img
-  array_push($return_arr, $entry); 
-}
-
-$json = json_encode($return_arr);
-echo $json;
+?>

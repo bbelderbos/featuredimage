@@ -1,7 +1,7 @@
 <?php
 $baseurl = "http://".$_SERVER["HTTP_HOST"];
 $logfile = "images.txt";
-$bgcolor = "#e9ebde"; # color of background frame around images on my blog
+$bgcolor = "e9ebde"; # color of background frame around images on my blog
 $dimensions = array(
   "width" => "200px",
   "height" => "200px",
@@ -24,9 +24,10 @@ $sizes = array(
   4 => "50%",
   5 => "75%",
   6 => "100%",
-  7 => "200%",
-  8 => "500%",
-  9 => "1000%",
+  7 => "150%",
+  8 => "200%",
+  9 => "500%",
+  10 => "1000%",
 );
 $opacities = array(
   1 => "0.1",
@@ -42,7 +43,7 @@ $opacities = array(
 );
 $border = "#ccc";
 $title = array( 
-  "text" => "blog title placeholder",
+  "text" => "Title of blog post?",
   "titlecolor" => "000", 
   "size" => "16px", # rfe - in form?
   "font" => "Limelight", # default
@@ -54,17 +55,17 @@ foreach($fontArray as $font){
 }
 $images = array(
   "bg1" => array(
-    "url" => "https://twimg0-a.akamaihd.net/profile_images/2357974774/vsuua7vxeim2khmxgjrx_bigger.png",
+    "url" => "http://t2.gstatic.com/images?q=tbn:ANd9GcREry7t0Az6wMvtc_P4H842sMTfmcH2yOqtgHhJdu-4hI_GaRJC2LWL5uI", #placeholder images
     "position" => 1,
     "size" => 2,
   ),
   "bg2" => array(
-    "url" => "..",
+    "url" => "http://t2.gstatic.com/images?q=tbn:ANd9GcREry7t0Az6wMvtc_P4H842sMTfmcH2yOqtgHhJdu-4hI_GaRJC2LWL5uI",
     "position" => 7,
     "size" => 2,
   ),
   "overlay" => array(
-    "url" => "http://peppoj.net/wp-content/uploads/2010/07/512-Terminal.png",
+    "url" => "http://t2.gstatic.com/images?q=tbn:ANd9GcREry7t0Az6wMvtc_P4H842sMTfmcH2yOqtgHhJdu-4hI_GaRJC2LWL5uI",
     "position" => 1,
     "size" => 6,
     "opacity" => 3,

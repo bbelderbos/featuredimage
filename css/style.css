@@ -96,3 +96,6 @@ input#create {
   float: right; 
   width: 100px;
 }
+.defaultText { font-style: italic; } 
+.defaultTextActive { color: #a1a1a1; font-style: italic; }                                                                                                
+

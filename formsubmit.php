@@ -1,6 +1,6 @@
 <?php
 # form (start simple)
-if(isset($_GET['bgcolor'])){
+if(isset($_GET['bg1_url']) || isset($_GET['bg2_url']) || isset($_GET['overlay_url'])){
   $bgcolor = $_GET['bgcolor'];
   $title["text"] = ucwords($_GET['title']);
   $title["font"] = $_GET['font'];

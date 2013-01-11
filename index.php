@@ -18,6 +18,7 @@ include 'formsubmit.php';
 </head>
 
 <body>
+  <div id="testdiv"></div>
   <?php include 'form.php'; ?>
 
   <div id="results">
