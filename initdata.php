@@ -1,5 +1,7 @@
 <?php
 $baseurl = "http://".$_SERVER["HTTP_HOST"];
+$prevUrl = $_SERVER['HTTP_REFERER'];
+$startOverUrl = $baseurl . "/?bgcolor=e9ebde&font=Limelight&title=Title+of+blog+post%3F&topoffset=60&titlecolor=000&bg1_url=http%3A%2F%2Ft2.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcREry7t0Az6wMvtc_P4H842sMTfmcH2yOqtgHhJdu-4hI_GaRJC2LWL5uI&bg1_pos=1&bg1_size=2&bg2_url=http%3A%2F%2Ft2.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcREry7t0Az6wMvtc_P4H842sMTfmcH2yOqtgHhJdu-4hI_GaRJC2LWL5uI&bg2_pos=7&bg2_size=2&overlay_url=http%3A%2F%2Ft2.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcREry7t0Az6wMvtc_P4H842sMTfmcH2yOqtgHhJdu-4hI_GaRJC2LWL5uI&overlay_pos=1&overlay_size=6&overlay_opacity=3&create=Create+image";
 $logfile = "images.txt";
 $bgcolor = "e9ebde"; # color of background frame around images on my blog
 $dimensions = array(

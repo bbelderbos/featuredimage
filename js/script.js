@@ -1,17 +1,13 @@
 (function($){
-	$(".defaultText").live('focus', function(srcc){
-    if ($(this).val() == $(this)[0].title) {
-      $(this).removeClass("defaultTextActive");
-      $(this).val("");
-    }
+  // for autocomplete need select text in input field upon focus
+  $("#bg1_url, #bg2_url, #overlay_url").focus(function(){
+    this.select();
   });
-  $(".defaultText").live('blur', function(e){
-    if ($(this).val() == "") {
-      $(this).addClass("defaultTextActive");
-      $(this).val($(this)[0].title);
-    }
+  // workaround to make the focus work in safari
+  // http://stackoverflow.com/questions/1269722/selecting-text-on-focus-using-jquery-not-working-in-safari-and-chrome
+  $("#bg1_url, #bg2_url, #overlay_url").mouseup(function(e){
+    e.preventDefault();
   });
-	$(".defaultText").live().blur(); // ??
 
 	
   // fields with color picker
@@ -30,13 +26,9 @@
     $(this).ColorPickerSetColor(this.value);
   });
 
-  // automatically submit if changes are made to the form
-  $("form *").change(function() {
-    $("#addImage").submit();
-  });
 
-
-  // google image autocomplete
+  // google image autocomplete fields (x3)
+  // 1.
   $( "#bg1_url" ).autocomplete({
     source: "google_images_bg.php", 
     minLength: 2,
@@ -58,6 +50,7 @@
   };
 
 
+  // 2.
   $( "#bg2_url" ).autocomplete({
     source: "google_images_bg.php", 
     minLength: 2,
@@ -79,6 +72,7 @@
   };
 
 
+  // 3.
   $( "#overlay_url" ).autocomplete({
     source: "google_images_ol.php", 
     minLength: 2,
@@ -99,4 +93,19 @@
       .appendTo(ul);
   };
 
+  
+  // automatically submit if changes are made to the form (updates URL because form = GET)
+  $("form *").change(function() {
+    $("#addImage").submit();
+  });
+
 })(jQuery);
+
+
+function input_is_url(str){
+  if(str.indexOf('http://') == 0) { 
+    return true; 
+  } else {
+    return false; 
+  }
+}

@@ -9,6 +9,26 @@ li {
   list-style: none;
   float: left;
 }
+#login {
+  position: absolute; 
+  top: 3px; right: 5px;
+  padding: 4px;
+}
+#loginLinkInForm {
+  clear: both;
+  margin-left: 15px; 
+}
+#nav {
+  border: 1px solid #ddd;
+  overflow: hidden;
+  padding: 5px;
+  color: red;
+}
+#nav li {
+  padding: 0 4px;
+  border-left: 1px solid #eee;
+}
+  
 #results {
   width: 550px;
   margin: 25px 0 0 5px;
@@ -43,6 +63,7 @@ ul#prevImg li {
   border-radius: 8px; -webkit-border-radius: 8px; -moz-border-radius: 8px;
 }
 h1,h2,h3 {
+  clear: both;
   color: #000;
   font-family: 'Montez', cursive;
   padding: 2px 5px;
@@ -51,6 +72,9 @@ h1,h2,h3 {
 }
 h1#blogtitle {
   position: absolute;
+}
+#prevImg div {
+  padding: 0 0 30px 5px;
 }
 #formWrapper {
   float: left; 
@@ -91,11 +115,10 @@ input#create {
   border: none;
   height: 30px;
   color: #fff;
-  background-color: #900;
+  background-color: #000;
+  font-weight: bold;
   clear: both;
   float: right; 
   width: 100px;
 }
-.defaultText { font-style: italic; } 
-.defaultTextActive { color: #a1a1a1; font-style: italic; }                                                                                                
 

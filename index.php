@@ -1,6 +1,8 @@
 <?php
 include 'googlefonts.php';
 include 'initdata.php'; 
+include 'fbapi.php'; 
+include 'login.php';
 include 'formsubmit.php';
 ?>
 <!DOCTYPE html>
@@ -31,15 +33,11 @@ include 'formsubmit.php';
     </div>
 
     <ul id="prevImg">
-      <h3>Saved Images</h3>
       <?php include 'listimages.php'; ?>
     </ul>
   </div>
-
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-  <script type="text/javascript" src="js/colorpicker/js/colorpicker.js"></script>
-  <script type="text/javascript" src="js/script.js"></script>
+  
+  <?php include 'js.php'; ?>
 
 </body>
 </html>
