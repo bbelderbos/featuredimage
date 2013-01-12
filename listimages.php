@@ -22,12 +22,15 @@ while(!feof($file)) {
     if(strlen($title)>15){
       $title = substr($title, 0, 15)."..";
     }
-    $allImages[$title] = "<li><a href='$baseurl$url'>$title</a></li>";
+    $html = "<li><a href='$baseurl$url'>$title</a></li>";
 
-    # if fb id in link and same as logged in user, save in his/her images
-    if(strstr($fbid, $user)){ # == did not work
-      $userImages[$title] = $allImages[$title];
+    # if fb id in link and == logged in user show in "my images", else in everybody's images
+    if(strstr($fbid, $user)){ # a == did not work
+      $userImages[$title] = $html;
+    } else { 
+      $allImages[$title] = $html;
     }
+
     # keep track of processed urls
     array_push($seen, $url);
   }
@@ -37,19 +40,20 @@ fclose($file);
 # list user titles
 if($userImages){
   echo "<h3>Your Images</h3>";
-  echo "<div>";
+  echo "<ul>";
     foreach($userImages as $k=>$v){
       echo $v;
     }
-  echo "</div>";
+  echo "</ul>";
 }
 
 # list unique titles of all users
-echo "<h3 style='padding-top: 30px;'>All Images</h3>";
-echo "<div>";
-  foreach($allImages as $k=>$v){
-    echo $v;
-  }
-echo "</div>";
-
+if($allImages){  
+  echo "<h3 id='other'>Created by Others</h3>";
+  echo "<ul>";
+    foreach($allImages as $k=>$v){
+      echo $v;
+    }
+  echo "</ul>";
+}
 ?>
