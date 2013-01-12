@@ -2,7 +2,7 @@
 $fontsizeBlogtitle = $title["size"] * $fontScaling;
 $css = <<<EOD
 #wrapper {
-  background-color: #$bgcolor;
+  background-color: $bgcolor;
   width: {$wrapper_dimensions["width"]}px; 
   height: {$wrapper_dimensions["height"]}px;
 }
@@ -25,7 +25,7 @@ $css = <<<EOD
   background-size: {$sizes[$images["overlay"]["size"]]};
 }
 h1#blogtitle {
-  color: #{$title["titlecolor"]};
+  color: {$title["titlecolor"]};
   font-family: {$fonts[$title["font"]]};
   font-size: {$fontsizeBlogtitle};
   top: {$title["topoffset"]}px; 

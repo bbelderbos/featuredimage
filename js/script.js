@@ -8,10 +8,10 @@
 
   // this.select(); only worked for FF, the following
   // code works for safari / ipad as well
-  $("input[type='text'], textarea").live('mouseup', function (e) { 
+  $("input[type='text'], input[type='color'], textarea").live('mouseup', function (e) { 
     e.preventDefault(); 
   });
-  $("input[type='text'], textarea").live('focus', function () {
+  $("input[type='text'], input[type='color'], textarea").live('focus', function () {
     this.setSelectionRange(0, 9999); 
   });
 

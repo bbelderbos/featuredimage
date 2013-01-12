@@ -148,6 +148,7 @@ form#setDimensions {
   left: 420px;
 }
 form#setDimensions input, form#setDimensions label {
+  padding-top: 3px;
   clear: none;
   height: 15px;
   float: left;
