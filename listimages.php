@@ -19,10 +19,11 @@ while(!feof($file)) {
 
   # only unique urls
   if(!in_array($url, $seen)){ 
+    $moreInfo = $title;
     if(strlen($title)>15){
       $title = substr($title, 0, 15)."..";
-    }
-    $html = "<li><a href='$baseurl$url'>$title</a></li>";
+    } 
+    $html = "<li><a href='$baseurl$url' title='$moreInfo'>$title</a></li>";
 
     # if fb id in link and == logged in user show in "my images", else in everybody's images
     if(strstr($fbid, $user)){ # a == did not work
