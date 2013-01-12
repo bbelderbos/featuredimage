@@ -19,11 +19,6 @@ li {
   position: absolute;
   top: 2px; left: 25px;
 }
-#login {
-  position: absolute; 
-  top: 4px; right: 120px;
-  padding: 4px;
-}
 #loginLinkInForm {
   clear: both;
   margin-left: 15px; 
@@ -36,14 +31,15 @@ li {
   overflow: hidden;
   padding: 5px 10px 5px 2px;
 }
+#login {
+  position: absolute; 
+  top: 20px; right: 5px;
+  padding: 4px;
+}
 #footer {
-  padding: 2px 25px;
-  overflow: hidden;
-  width: 100%;
+  padding: 2px;
   position: absolute;
-  bottom: 0px; left: 0px;
-  border-top: 1px #ccc solid; 
-  background-color: #f2f2f2;
+  top: 2px; right: 5px;
 }
 #nav li, #footer li {
   border: none;
@@ -60,7 +56,7 @@ li {
   overflow: hidden;
 }
 ul#prevImg {
-  width: 240px;
+  width: 230px;
   padding: 5px;
   float: left; 
   margin-left: 20px;
@@ -106,8 +102,8 @@ h1#blogtitle {
 }
 form {
   overflow: hidden;
-  padding: 10px 20px 10px 0;
-  width: 500px;
+  padding: 5px;
+  width: 360px;
 }
 label {
   clear: both;
@@ -118,12 +114,12 @@ label {
 }
 input, select {
   margin: 5px;
-  width: 300px;
+  width: 160px;
   height: 22px;
   float: right;
 }
 select, .smallInput {
-  width: 146px; 
+  width: 76px; 
 }
 input#storeLink {
   width: 20px; 
