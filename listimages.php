@@ -23,7 +23,7 @@ while(!feof($file)) {
     if(strlen($title)>15){
       $title = substr($title, 0, 15)."..";
     } 
-    $html = "<li><a href='$baseurl$url' title='$moreInfo'>$title</a></li>";
+    $html = "<li><a href='$baseurl$url' title='$moreInfo'>".urldecode($title)."</a></li>";
 
     # if fb id in link and == logged in user show in "my images", else in everybody's images
     if(strstr($fbid, $user)){ # a == did not work
