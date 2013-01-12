@@ -10,6 +10,12 @@
   });
 
 	
+  // automatically submit if url fields change (autocomplete select = populate does not work)
+  $("#bg1_url, #bg2_url, #overlay_url").change(function() {
+    $("#addImage").submit();
+  });
+
+
   // fields with color picker
   $('#bgcolor, #titlecolor').ColorPicker({
     onSubmit: function(hsb, hex, rgb, el) {
@@ -94,16 +100,8 @@
   };
 
   
-  // automatically submit if changes are made to the form (updates URL because form = GET)
-  $("form *").change(function() {
-    $("#addImage").submit();
-  });
-
-
   $("#saveImage").live('click', function(e) {
-    var image = canvas.toDataURL("image/png", true); 
-    var imageElement = document.getElementById("myPics");
-    imageElement.src = image;
+    alert("To be implemented ...");
     return false;
   });
 
