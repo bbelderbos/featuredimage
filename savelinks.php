@@ -4,8 +4,9 @@
   <input class="button" id="create" name="create" value="Create image" type='submit'>
   <input type="hidden" id="fbid" name="fbid" value="<?php echo $user; ?>">
 <?php else: ?>
-   <div id="loginLinkInForm">
-     <br><br>
-     <div class="fb-login-button" data-show-faces="true" data-width="300" data-max-rows="1">Login with Facebook to save your images ...</div>
-   </div>
+  <input class="button" id="create" name="create" value="Create image" type='submit'>
+  <div id="loginLinkInForm">
+    <br><br>
+    <div class="fb-login-button" data-show-faces="true" data-width="300" data-max-rows="1">Login with Facebook to save your images ...</div>
+  </div>
 <?php endif; ?>
