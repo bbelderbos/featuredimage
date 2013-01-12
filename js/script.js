@@ -47,7 +47,7 @@
     select: function(event, ui) { 
       currentUrl = document.URL;
       imageLink = encodeURIComponent(ui.item.url);
-      newUrl = currentUrl.replace(/(.*bg1_url=)(?:[^&]+)(&.*)/, "$1"+imageLink+"$2"); 
+      newUrl = currentUrl.replace(/(.*bg1_url=)(?:[^&]*)(&.*)/, "$1"+imageLink+"$2"); 
       $(this).val(newUrl);
       location.href=newUrl;
     },
@@ -70,7 +70,7 @@
     select: function(event, ui) { 
       currentUrl = document.URL;
       imageLink = encodeURIComponent(ui.item.url);
-      newUrl = currentUrl.replace(/(.*bg2_url=)(?:[^&]+)(&.*)/, "$1"+imageLink+"$2"); 
+      newUrl = currentUrl.replace(/(.*bg2_url=)(?:[^&]*)(&.*)/, "$1"+imageLink+"$2"); 
       $(this).val(newUrl);
       location.href=newUrl;
     },
@@ -93,7 +93,7 @@
     select: function(event, ui) { 
       currentUrl = document.URL;
       imageLink = encodeURIComponent(ui.item.url);
-      newUrl = currentUrl.replace(/(.*overlay_url=)(?:[^&]+)(&.*)/, "$1"+imageLink+"$2"); 
+      newUrl = currentUrl.replace(/(.*overlay_url=)(?:[^&]*)(&.*)/, "$1"+imageLink+"$2"); 
       $(this).val(newUrl);
       location.href=newUrl;
     },
