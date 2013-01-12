@@ -151,3 +151,8 @@ a#saveImage {
   height: 18px;
   margin: 20px 25px 0 0;
 }
+#progress {
+  position: relative;
+  top: 8px; 
+  left: 15px;
+}

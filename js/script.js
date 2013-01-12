@@ -1,4 +1,8 @@
 (function($){
+
+  //after load complete unblock page (gets blocked with submit)
+  $.unblockUI();
+
   // for autocomplete need select text in input field upon focus
   $("#bg1_url, #bg2_url, #overlay_url").focus(function(){
     this.select();
@@ -14,6 +18,16 @@
   $("#bg1_url, #bg2_url, #overlay_url").change(function() {
     $("#addImage").submit();
   });
+
+
+  // progress loader upon submit
+  $('form').submit(function() {
+    // block page
+    $.blockUI({ message: '<h1><img src="i/loader.gif" /> Updating image ...</h1>' });
+    $("#progress").html("<img src='i/loader.gif'>");
+    //return false;
+  });
+
 
 
   // fields with color picker

@@ -13,7 +13,7 @@
 <meta property="og:url" content="<?php echo $appUrl; ?>" />
 <meta property="og:title" content="<?php echo $siteName; ?>" />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="<?php echo $appUrl."logo.png"; ?>" />
+<meta property="og:image" content="<?php echo $appUrl."i/logo.png"; ?>" />
 <meta property="fb:admins" content="<?php echo $admin; ?>" />
 <meta property="fb:app_id" content="<?php echo $facebook->getAppID() ?>">
 

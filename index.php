@@ -10,7 +10,7 @@ include 'header.php';
   <?php include 'form.php'; ?>
 
   <div id="results">
-    <h1>Featured Images</h1>
+    <h1>Featured Images<span id="progress"></span></h1>
     <div id="wrapper">
       <div id="featImg">
         <h1 id="blogtitle"><?php echo $title["text"]; ?></h1>
