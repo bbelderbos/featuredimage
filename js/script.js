@@ -14,12 +14,6 @@
   });
 
 	
-  // automatically submit if url fields change (autocomplete select = populate does not work)
-  $("#bg1_url, #bg2_url, #overlay_url").change(function() {
-    $("#addImage").submit();
-  });
-
-
   // progress loader upon submit
   $('form').submit(function() {
     // block page
@@ -51,10 +45,11 @@
     source: "google_images_bg.php", 
     minLength: 2,
     select: function(event, ui) { 
-      currentUrl = document.URL
-      imageLink = encodeURIComponent(ui.item.url)
+      currentUrl = document.URL;
+      imageLink = encodeURIComponent(ui.item.url);
       newUrl = currentUrl.replace(/(.*bg1_url=)(?:[^&]+)(&.*)/, "$1"+imageLink+"$2"); 
-      location.href=newUrl
+      $(this).val(newUrl);
+      location.href=newUrl;
     },
   }).data( "autocomplete" )._renderItem = function( ul, item ) {
     var imghtml = '';
@@ -73,10 +68,11 @@
     source: "google_images_bg.php", 
     minLength: 2,
     select: function(event, ui) { 
-      currentUrl = document.URL
-      imageLink = encodeURIComponent(ui.item.url)
+      currentUrl = document.URL;
+      imageLink = encodeURIComponent(ui.item.url);
       newUrl = currentUrl.replace(/(.*bg2_url=)(?:[^&]+)(&.*)/, "$1"+imageLink+"$2"); 
-      location.href=newUrl
+      $(this).val(newUrl);
+      location.href=newUrl;
     },
   }).data( "autocomplete" )._renderItem = function( ul, item ) {
     var imghtml = '';
@@ -95,10 +91,11 @@
     source: "google_images_ol.php", 
     minLength: 2,
     select: function(event, ui) { 
-      currentUrl = document.URL
-      imageLink = encodeURIComponent(ui.item.url)
+      currentUrl = document.URL;
+      imageLink = encodeURIComponent(ui.item.url);
       newUrl = currentUrl.replace(/(.*overlay_url=)(?:[^&]+)(&.*)/, "$1"+imageLink+"$2"); 
-      location.href=newUrl
+      $(this).val(newUrl);
+      location.href=newUrl;
     },
   }).data( "autocomplete" )._renderItem = function( ul, item ) {
     var imghtml = '';
