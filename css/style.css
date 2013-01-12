@@ -148,7 +148,6 @@ form#setDimensions {
   left: 420px;
 }
 form#setDimensions input, form#setDimensions label {
-  padding-top: 3px;
   clear: none;
   height: 15px;
   float: left;
@@ -162,7 +161,7 @@ form#setDimensions #submitDimensions{
 }
 a#saveImage {
   padding: 5px 0 0 15px;
-  width: 80px;
+  width: 70px;
   height: 18px;
   margin: 20px 25px 0 0;
 }

@@ -18,7 +18,8 @@ include 'dimension_form.php';
         <h1 id="blogtitle"><?php echo $title["text"]; ?></h1>
         <div id='overlay'></div>
       </div>
-      <a href='#' class='button' id='saveImage'>Save image</a>
+      <!-- todo
+      <a href='#' class='button' id='saveImage'>Download</a>-->
     </div>
     
 

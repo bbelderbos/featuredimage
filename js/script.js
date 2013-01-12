@@ -132,7 +132,7 @@
 
   // todo: download image as png to desktop 
   $("#saveImage").live('click', function(e) {
-    alert("To be implemented ...");
+    // todo
     return false;
   });
 
