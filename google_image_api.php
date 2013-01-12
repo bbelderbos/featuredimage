@@ -2,7 +2,7 @@
 # modified script from https://developers.google.com/image-search/v1/jsondevguide
 $mysite = "http://bobbelderbos.com";
 $search = urlencode($_GET["term"]);
-$ip =  gethostbyname(gethostname());
+$ip = $_SERVER["REMOTE_ADDR"];
 $filetype = "png";
 $imagesize = "small|medium|large|xlarge";
 $numresults = "8";

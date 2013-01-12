@@ -99,6 +99,14 @@
     $("#addImage").submit();
   });
 
+
+  $("#saveImage").live('click', function(e) {
+    var image = canvas.toDataURL("image/png", true); 
+    var imageElement = document.getElementById("myPics");
+    imageElement.src = image;
+    return false;
+  });
+
 })(jQuery);
 
 
