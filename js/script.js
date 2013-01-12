@@ -35,8 +35,6 @@
     onSubmit: function(hsb, hex, rgb, el) {
       $(el).val(hex);
       $(el).ColorPickerHide();
-      // submit form on change
-      $("#addImage").submit();
     },
     onBeforeShow: function () {
       $(this).ColorPickerSetColor(this.value);
