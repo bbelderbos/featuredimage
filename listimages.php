@@ -46,6 +46,8 @@ if($userImages){
       echo $v;
     }
   echo "</ul>";
+} elseif($user) {
+  echo "<p>You haven't created any images yet.</p>";
 }
 
 # list unique titles of all users
@@ -56,5 +58,7 @@ if($allImages){
       echo $v;
     }
   echo "</ul>";
+} else {
+  echo "<p>No images have been saved by anyone yet.</p>";
 }
 ?>
