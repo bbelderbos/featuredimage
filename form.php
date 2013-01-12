@@ -7,7 +7,7 @@
   </ul>
 
   <form id="addImage" name="addImage" method="get">
-    <label>1. <a href="http://www.google.com/webfonts">Google Font</a> / Bg color hex</label>
+    <label>1. <a href="http://www.google.com/webfonts">Google Font</a> / background color</label>
     <input class="smallInput" id="bgcolor" name="bgcolor" value="<?php echo $bgcolor; ?>">
     <select id="font" name="font">
     <?php
@@ -19,12 +19,12 @@
     }
     ?>
     </select>
-    <label>2. Blog Title</label>
+    <label>2. Title of image (blog post)</label>
     <input id="title" name="title" value="<?php echo $title["text"]; ?>">
-    <label>- Color hex / Px margin-top</label>
+    <label>- Color / margin-top of title in px</label>
     <input class="smallInput auto_submit_item" id="topoffset" name="topoffset" value="<?php echo $title["topoffset"]; ?>">
     <input class="smallInput" id="titlecolor" id="titlecolor" name="titlecolor" value="<?php echo $title["titlecolor"]; ?>">
-    <label>3. Bg image #1 url</label>
+    <label>3. First background image url</label>
     <input id="bg1_url" name="bg1_url" value="<?php echo $images["bg1"]["url"]; ?>">
     <label>- Scale / Position</label>
     <select id="bg1_pos" name="bg1_pos">
@@ -45,7 +45,7 @@
     }
     ?>
     </select>
-    <label>4. Bg image #2 url (optional)</label>
+    <label>4. Second background image url</label>
     <input id="bg2_url" name="bg2_url" value="<?php echo $images["bg2"]["url"]; ?>">
     <label>- Scale / Position</label>
     <select id="bg2_pos" name="bg2_pos">
@@ -66,7 +66,7 @@
     }
     ?>
     </select>
-    <label>5. Overlay image url</label>
+    <label>5. Third overlay image url</label>
     <input id="overlay_url" name="overlay_url" value="<?php echo $images["overlay"]["url"]; ?>">
     <label>- Scale / Position</label>
     <select id="overlay_pos" name="overlay_pos">
