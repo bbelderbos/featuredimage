@@ -17,7 +17,7 @@
 
 	
   // progress loader upon submit
-  $('form').submit(function() {
+  $('form#addImage').submit(function() {
     // block page
     $.blockUI({ message: '<h1><img src="i/loader.gif" /> Updating image ...</h1>' });
     $("#progress").html("<img src='i/loader.gif'>");

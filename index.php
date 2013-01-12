@@ -1,9 +1,11 @@
 <?php
+include 'session.php';
 include 'googlefonts.php';
 include 'initdata.php'; 
 include 'fbapi.php'; 
 include 'formsubmit.php';
 include 'header.php';
+include 'dimension_form.php';
 ?>
   <?php include 'login.php'; ?>
   <div id="testdiv"></div>

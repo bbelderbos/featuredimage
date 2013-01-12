@@ -10,8 +10,8 @@ $logfile = "images.txt";
 $bgcolor = "e9ebde"; # color of background frame around images on my blog
 $dimensions = array(
   # rfe - scale, but for now I want to use it for blog featured images which are 200x200
-  "width" => "200", 
-  "height" => "200",
+  "width" => $_SESSION['width'], 
+  "height" => $_SESSION['height'],
 );
 $wrapper_dimensions = array(
   "width" => $dimensions["width"]*1.25,

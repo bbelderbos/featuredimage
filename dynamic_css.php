@@ -1,4 +1,5 @@
 <?php
+$fontsizeBlogtitle = $title["size"] * $fontScaling;
 $css = <<<EOD
 #wrapper {
   background-color: #$bgcolor;
@@ -26,7 +27,7 @@ $css = <<<EOD
 h1#blogtitle {
   color: #{$title["titlecolor"]};
   font-family: {$fonts[$title["font"]]};
-  font-size: {$title["size"]};
+  font-size: {$fontsizeBlogtitle};
   top: {$title["topoffset"]}px; 
 }
 input#create {

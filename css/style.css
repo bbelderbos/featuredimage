@@ -33,13 +33,13 @@ li {
 }
 #login {
   position: absolute; 
-  top: 20px; right: 5px;
+  top: 25px; right: 5px;
   padding: 4px;
 }
 #footer {
   padding: 2px;
   position: absolute;
-  top: 2px; right: 5px;
+  top: 5px; right: 5px;
 }
 #nav li, #footer li {
   border: none;
@@ -54,6 +54,7 @@ li {
 #wrapper {
   float: left;
   overflow: hidden;
+  margin-bottom: 40px;
 }
 ul#prevImg {
   width: 230px;
@@ -100,7 +101,7 @@ h1#blogtitle {
   float: left; 
   margin: 20px;
 }
-form {
+form#addImage {
   overflow: hidden;
   padding: 5px;
   width: 360px;
@@ -141,6 +142,23 @@ input#storeLink {
 input#create {
   margin-top: -20px;
 }
+form#setDimensions {
+  position: absolute;
+  top: 5px;
+  left: 420px;
+}
+form#setDimensions input, form#setDimensions label {
+  clear: none;
+  height: 15px;
+  float: left;
+  width: 60px;
+}
+form#setDimensions #submitDimensions{
+  height: 18px;
+  padding: 0px 3px 3px 3px;
+  width: 80px;
+  font-size: 85%;
+}
 a#saveImage {
   padding: 5px 0 0 15px;
   width: 80px;
@@ -151,4 +169,10 @@ a#saveImage {
   position: relative;
   top: 8px; 
   left: 15px;
+}
+.myimages {
+  font-size: 150%;
+  position: relative; 
+  bottom: 15px; 
+  left: 12px;
 }

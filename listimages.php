@@ -40,7 +40,7 @@ fclose($file);
 
 # list user titles
 if($userImages){
-  echo "<h3>Your Images</h3>";
+  echo "<h3><img src='https://graph.facebook.com/$user/picture'><span class='myimages'>My Images</span></h3>";
   echo "<ul>";
     foreach($userImages as $k=>$v){
       echo $v;
