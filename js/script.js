@@ -17,7 +17,7 @@
 
 	
   // progress loader upon submit
-  $('form#addImage').submit(function() {
+  $('form').submit(function() {
     // block page
     $.blockUI({ message: '<h1><img src="i/loader.gif" /> Updating image ...</h1>' });
     $("#progress").html("<img src='i/loader.gif'>");
@@ -27,17 +27,9 @@
 
 
   // fields with color picker
-  $('#bgcolor, #titlecolor').ColorPicker({
-    onSubmit: function(hsb, hex, rgb, el) {
-      $(el).val(hex);
-      $(el).ColorPickerHide();
-    },
-    onBeforeShow: function () {
-      $(this).ColorPickerSetColor(this.value);
-    }
-  })
-  .bind('keyup', function(){
-    $(this).ColorPickerSetColor(this.value);
+  $('#bgcolor, #titlecolor').spectrum({
+    showInitial: true,
+    showInput: true,
   });
 
 

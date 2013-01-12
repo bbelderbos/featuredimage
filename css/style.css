@@ -177,3 +177,10 @@ a#saveImage {
   bottom: 15px; 
   left: 12px;
 }
+#bgcolor {
+  position: relative; 
+  top: 0px; left: 10px;
+}
+#titlecolor, #bgcolor {
+  border: 1px solid red;
+}

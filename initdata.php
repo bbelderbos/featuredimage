@@ -56,8 +56,8 @@ $border = "#ccc";
 $title = array( 
   "text" => "Title of blog post?",
   "titlecolor" => "#000000", 
-  "size" => "16px", # rfe - in form?
-  "font" => "Limelight", # default
+  "size" => "16",
+  "font" => "Limelight", 
   "topoffset" => "60",
 );
 $fonts = array();

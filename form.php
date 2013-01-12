@@ -8,8 +8,14 @@
   </ul>
 
   <form id="addImage" name="addImage" method="get">
-    <label>1. <a href="http://www.google.com/webfonts">Google Font</a> / background color</label>
-    <input type="color" class="smallInput" id="bgcolor" name="bgcolor" value="<?php echo $bgcolor; ?>">
+    <label>1. Canvas background / Title color</label>
+    <div id="colorHandles" style="position: relative; left: 12px; padding: 5px 0;">
+      <input type="color" class="smallInput" id="bgcolor" name="bgcolor" value="<?php echo $bgcolor; ?>">
+      <input type="color" class="smallInput" id="titlecolor" id="titlecolor" name="titlecolor" value="<?php echo $title["titlecolor"]; ?>">
+    </div>
+    <label>2. Title text in image (blog post)</label>
+    <input type="text" id="title" name="title" value="<?php echo $title["text"]; ?>">
+    <label>  - Margin-top (in px) / <a href="http://www.google.com/webfonts">Google Font</a></label>
     <select id="font" name="font">
     <?php
     foreach($fonts as $k=>$v){
@@ -20,11 +26,7 @@
     }
     ?>
     </select>
-    <label>2. Title of image (blog post)</label>
-    <input type="text" id="title" name="title" value="<?php echo $title["text"]; ?>">
-    <label>  - Color / margin-top of title in px</label>
     <input type="text" class="smallInput auto_submit_item" id="topoffset" name="topoffset" value="<?php echo $title["topoffset"]; ?>">
-    <input type="color" class="smallInput" id="titlecolor" id="titlecolor" name="titlecolor" value="<?php echo $title["titlecolor"]; ?>">
     <label>3. First background image url</label>
     <input type="text" id="bg1_url" name="bg1_url" value="<?php echo $images["bg1"]["url"]; ?>">
     <label>  - Scale / Position</label>
