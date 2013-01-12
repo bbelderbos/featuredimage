@@ -5,6 +5,7 @@
   <input type="hidden" id="fbid" name="fbid" value="<?php echo $user; ?>">
 <?php else: ?>
    <div id="loginLinkInForm">
-     <br><br><fb:login-button size="small">Login with Facebook to save your images</fb:login-button>             
+     <br><br>
+     <div class="fb-login-button" data-show-faces="true" data-width="300" data-max-rows="1">Login with Facebook to save your images ...</div>
    </div>
 <?php endif; ?>

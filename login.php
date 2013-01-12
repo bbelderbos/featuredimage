@@ -6,7 +6,7 @@
   <?php else: ?>
     <div>
       <!--<a href="<?php //echo $loginUrl; ?>">Login with Facebook to save your images</a>-->
-      <fb:login-button size="small">Build your Blog Featured Image collection ...</fb:login-button>
+      <div class="fb-login-button" data-show-faces="true" data-width="300" data-max-rows="1">Build your Blog Featured Image collection ...</div>
     </div>
   <?php endif ?>
 </div>
