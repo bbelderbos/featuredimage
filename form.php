@@ -4,6 +4,7 @@
   <ul id="nav">
     <li><a href='<?php echo $prevUrl; ?>'>Undo last change</a></li>
     <li><a href='<?php echo $startOverUrl; ?>'>Start over</a></li>
+    <li><div class="spinner"><img src="i/mini-loader.gif"></div></li>
   </ul>
 
   <form id="addImage" name="addImage" method="get">

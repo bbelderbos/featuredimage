@@ -1,5 +1,8 @@
 (function($){
 
+  // autocomplete progress spinner hides on loading page
+  $('.spinner').hide();
+
   //after load complete unblock page (gets blocked with submit)
   $.unblockUI();
 
@@ -44,7 +47,14 @@
   $( "#bg1_url" ).autocomplete({
     source: "google_images_bg.php", 
     minLength: 2,
+    search: function(event, ui) { 
+      $('.spinner').show();
+    },
+    open: function(event, ui) {
+      $('.spinner').hide();
+    }, 
     select: function(event, ui) { 
+      $('.spinner').show();
       currentUrl = document.URL;
       imageLink = encodeURIComponent(ui.item.url);
       newUrl = currentUrl.replace(/(.*bg1_url=)(?:[^&]*)(&.*)/, "$1"+imageLink+"$2"); 
@@ -67,7 +77,14 @@
   $( "#bg2_url" ).autocomplete({
     source: "google_images_bg.php", 
     minLength: 2,
+    search: function(event, ui) { 
+      $('.spinner').show();
+    },
+    open: function(event, ui) {
+      $('.spinner').hide();
+    }, 
     select: function(event, ui) { 
+      $('.spinner').show();
       currentUrl = document.URL;
       imageLink = encodeURIComponent(ui.item.url);
       newUrl = currentUrl.replace(/(.*bg2_url=)(?:[^&]*)(&.*)/, "$1"+imageLink+"$2"); 
@@ -90,7 +107,14 @@
   $( "#overlay_url" ).autocomplete({
     source: "google_images_ol.php", 
     minLength: 2,
+    search: function(event, ui) { 
+      $('.spinner').show();
+    },
+    open: function(event, ui) {
+      $('.spinner').hide();
+    }, 
     select: function(event, ui) { 
+      $('.spinner').show();
       currentUrl = document.URL;
       imageLink = encodeURIComponent(ui.item.url);
       newUrl = currentUrl.replace(/(.*overlay_url=)(?:[^&]*)(&.*)/, "$1"+imageLink+"$2"); 
