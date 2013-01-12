@@ -132,7 +132,14 @@
       .appendTo(ul);
   };
 
+
+  // if clicking storeLink, autosubmit
+  $("#storeLink").change(function() {
+    $("#addImage").submit();
+  });
   
+
+  // todo: download image as png to desktop 
   $("#saveImage").live('click', function(e) {
     alert("To be implemented ...");
     return false;
