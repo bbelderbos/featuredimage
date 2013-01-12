@@ -6,14 +6,13 @@
   //after load complete unblock page (gets blocked with submit)
   $.unblockUI();
 
-  // for autocomplete need select text in input field upon focus
-  $("#bg1_url, #bg2_url, #overlay_url").focus(function(){
-    this.select();
+  // this.select(); only worked for FF, the following
+  // code works for safari / ipad as well
+  $("input[type='text'], textarea").live('mouseup', function (e) { 
+    e.preventDefault(); 
   });
-  // workaround to make the focus work in safari
-  // http://stackoverflow.com/questions/1269722/selecting-text-on-focus-using-jquery-not-working-in-safari-and-chrome
-  $("#bg1_url, #bg2_url, #overlay_url").mouseup(function(e){
-    e.preventDefault();
+  $("input[type='text'], textarea").live('focus', function () {
+    this.setSelectionRange(0, 9999); 
   });
 
 	
