@@ -26,8 +26,9 @@ while(!feof($file)) {
     $html = "<li><a href='$baseurl$url' title='$moreInfo'>".urldecode($title)."</a></li>";
 
     # if fb id in link and == logged in user show in "my images", else in everybody's images
-    if(strstr($fbid, $user)){ # a == did not work
-      $userImages[$title] = $html;
+    # if($fbid == $user){ # does not work
+    if(strstr($fbid, $user)){ 
+      $userImages[$title] = $html; 
     } else { 
       $allImages[$title] = $html;
     }

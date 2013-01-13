@@ -166,7 +166,7 @@ a#saveImage {
   padding: 5px 0 0 15px;
   width: 70px;
   height: 18px;
-  margin: 10px 25px 0 0;
+  margin: 0 25px 0 0;
 }
 #progress {
   position: relative;
@@ -182,4 +182,19 @@ a#saveImage {
 #bgcolor {
   position: relative; 
   top: 0px; left: 10px;
+}
+#instructions {
+  clear: both;
+  padding: 15px 0 0 0 ;
+  margin-right: 20px;
+}
+#instructions input, #instructions label {
+  height: 10px;
+  width: 200px;
+  margin: 2px; 
+  padding: 1px;
+  font-size: 80%;
+}
+#instructions label {
+  padding-left: 25px;
 }

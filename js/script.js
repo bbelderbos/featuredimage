@@ -2,6 +2,7 @@
 
   // autocomplete progress spinner hides on loading page
   $('.spinner').hide();
+  $('#instructions').hide();
 
   //after load complete unblock page (gets blocked with submit)
   $.unblockUI();
@@ -130,11 +131,15 @@
   });
   
 
-  // todo: download image as png to desktop 
-  $("#saveImage").live('click', function(e) {
-    // todo
-    return false;
-  });
+  // show / hide instructions under save btn
+  $("#saveImage").toggle(
+    function () {
+      $('#instructions').slideDown();
+    },
+    function () {
+      $('#instructions').slideUp();
+    }
+  );
 
 })(jQuery);
 
