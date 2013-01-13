@@ -1,5 +1,5 @@
 <?php
-$siteName = "Featured Image Creator";
+$siteName = "CSS Featured Image Creator";
 $admin = "628517118";
 $baseurl = "http://".$_SERVER["HTTP_HOST"];
 $subdir = "featured_image";
