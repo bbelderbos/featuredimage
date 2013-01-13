@@ -22,7 +22,7 @@ include 'dimension_form.php';
       </div>
       <a href='#' class='button' id='saveImage'>Download</a>
       <div id="instructions">
-        <label>Firefox Dev Toolbar - after shift+F2, copy following:</label>
+        <label>Firefox Dev Toolbar - after shift+F2, copy/paste:</label>
         <input type="text" id="cmd" value="screenshot name.png --selector #innerWrapper">
         <label>Or printscreen On Mac - select area with:</label>
         <input type="text" readonly="readonly" value="Shift-Command-4">
