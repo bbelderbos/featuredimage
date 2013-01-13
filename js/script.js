@@ -5,7 +5,7 @@
   $('#instructions').hide();
 
   //after load complete unblock page (gets blocked with submit)
-  $.unblockUI();
+  // $.unblockUI();
 
   // this.select(); only worked for FF, the following
   // code works for safari / ipad as well
@@ -19,10 +19,28 @@
 	
   // progress loader upon submit
   $('form').submit(function() {
-    // block page
-    $.blockUI({ message: '<h1><img src="i/loader.gif" /> Updating image ...</h1>' });
     $("#progress").html("<img src='i/loader.gif'>");
-    //return false;
+    // $.blockUI({ message: '<h1><img src="i/loader.gif" /> Updating image ...</h1>' });
+    var bgcolor = $("#bgcolor").val();
+    var titlecolor = $("#titlecolor").val();
+    var title = $("#title").val();
+    var font = $("#font option:selected").val();
+    var topoffset = $("#topoffset").val();
+    var bg1_url = $("#bg1_url").val();
+    var bg1_pos = $("#bg1_pos option:selected").val();
+    var bg1_size = $("#bg1_size option:selected").val();
+    var bg2_url = $("#bg2_url").val();
+    var bg2_pos = $("#bg2_pos option:selected").val();
+    var bg2_size = $("#bg2_size option:selected").val();
+    var overlay_url = $("#overlay_url").val();
+    var overlay_pos = $("#overlay_pos option:selected").val();
+    var overlay_size = $("#overlay_size option:selected").val();
+    var overlay_opacity = $("#overlay_opacity option:selected").val();
+    var storeLink = $('#storeLink').is(':checked');
+    var create = $("#create").val();
+    var fbid = $("#fbid").val();
+    alert(font); // undefined?
+    return false;
   });
 
 
