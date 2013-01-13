@@ -37,8 +37,10 @@ $sizes = array(
   6 => "100%",
   7 => "150%",
   8 => "200%",
-  9 => "500%",
-  10 => "1000%",
+  9 => "300%",
+  10 => "400%",
+  11 => "500%",
+  12 => "1000%",
 );
 $opacities = array(
   1 => "0.1",
@@ -54,7 +56,7 @@ $opacities = array(
 );
 $border = "#ccc";
 $title = array( 
-  "text" => "Title of blog post?",
+  "text" => "Title of image",
   "titlecolor" => "#000000", 
   "size" => "16",
   "font" => "Limelight", 
@@ -66,19 +68,19 @@ foreach($fontArray as $font){
 }
 $images = array(
   "bg1" => array(
-    "url" => "http://t2.gstatic.com/images?q=tbn:ANd9GcREry7t0Az6wMvtc_P4H842sMTfmcH2yOqtgHhJdu-4hI_GaRJC2LWL5uI", #placeholder images
+    "url" => "", 
     "position" => 1,
     "size" => 2,
   ),
   "bg2" => array(
-    "url" => "http://t2.gstatic.com/images?q=tbn:ANd9GcREry7t0Az6wMvtc_P4H842sMTfmcH2yOqtgHhJdu-4hI_GaRJC2LWL5uI",
-    "position" => 7,
-    "size" => 2,
+    "url" => "http://castlefmscotland.com/wp-content/themes/premiumnews/styles/red/ribbon.png", # placeholder image
+    "position" => 4,
+    "size" => 4,
   ),
   "overlay" => array(
-    "url" => "http://t2.gstatic.com/images?q=tbn:ANd9GcREry7t0Az6wMvtc_P4H842sMTfmcH2yOqtgHhJdu-4hI_GaRJC2LWL5uI",
-    "position" => 1,
-    "size" => 6,
+    "url" => "http://digital-photography-school.com/wp-content/uploads/2009/08/landscape-photography-challenge.png", # placeholder image
+    "position" => 9,
+    "size" => 8,
     "opacity" => 3,
   ),
 );
