@@ -6,6 +6,6 @@
 <?php else: ?>
   <input class="button" id="create" name="create" style='margin-top:20px;' value="Create image" type='submit'>
   <div id="loginLinkInForm">
-    <div class="fb-login-button" data-show-faces="true" data-width="300" data-max-rows="1">Login with Facebook to save your images ...</div>              
+    <div class="fb-login-button" data-show-faces="true" data-width="240" data-max-rows="1">Start to build your collection ...</div>              
   </div>
 <?php endif; ?>

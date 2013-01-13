@@ -19,8 +19,9 @@ li {
   position: absolute;
   top: 2px; left: 25px;
 }
-#loginLinkInForm div {
-  padding-top: 25px;
+#loginLinkInForm {
+  position: relative;
+  top: 20px;
 }
 #nav, #nav li, #outerWrapper, ul#prevImg, ul#prevImg li, form, input, select {  
   border: 1px solid #ddd;
@@ -182,4 +183,7 @@ a#saveImage {
 #bgcolor {
   position: relative; 
   top: 0px; left: 10px;
+}
+#titlecolor, #bgcolor {
+  border: 1px solid red;
 }
