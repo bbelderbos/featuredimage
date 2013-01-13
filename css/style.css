@@ -23,7 +23,7 @@ li {
   position: relative;
   top: 20px;
 }
-#nav, #nav li, #wrapper, ul#prevImg, ul#prevImg li, form, input, select {  
+#nav, #nav li, #outerWrapper, ul#prevImg, ul#prevImg li, form, input, select {  
   border: 1px solid #ddd;
 }
 #nav {
@@ -51,7 +51,11 @@ li {
   margin: 20px 0 0 0;
   float: left;
 }
-#wrapper {
+#innerWrapper {
+  margin: 30px auto;
+  position: relative;
+}
+#outerWrapper {
   float: left;
   overflow: hidden;
   margin-bottom: 40px;
@@ -68,8 +72,8 @@ ul#prevImg li {
   margin: 4px 4px 2px 0;
 }
 #featImg { 
-  margin: 25px auto;
-  position: relative;
+  position: absolute;
+  top: 5px; left: 5px;
   background-repeat: no-repeat;
 }
 #featImg, img, #overlay {
@@ -163,7 +167,7 @@ a#saveImage {
   padding: 5px 0 0 15px;
   width: 70px;
   height: 18px;
-  margin: 20px 25px 0 0;
+  margin: 10px 25px 0 0;
 }
 #progress {
   position: relative;

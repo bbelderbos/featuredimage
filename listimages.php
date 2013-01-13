@@ -52,7 +52,7 @@ if($userImages){
 
 # list unique titles of all users
 if($allImages){  
-  echo "<h3 id='other'>Created by Others</h3>";
+  echo "<h3 id='other'>All Images Created</h3>";
   echo "<ul>";
     foreach($allImages as $k=>$v){
       echo $v;

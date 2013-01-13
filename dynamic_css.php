@@ -1,14 +1,23 @@
 <?php
+# depending the canvas size the font size of title is increased proportionally
 $fontsizeBlogtitle = $title["size"] * $fontScaling;
+# outerwrapper is width specified, inner is -11 (accounting for border of 1px)
+# ff printscreen = screenshot test.png --selector #innerWrapper
+$featImgWidth = $dimensions["width"] - 11;
+$featImgHeight = $dimensions["height"] - 11;
 $css = <<<EOD
-#wrapper {
+#outerWrapper {
   background-color: $bgcolor;
   width: {$wrapper_dimensions["width"]}px; 
   height: {$wrapper_dimensions["height"]}px;
 }
-#featImg { 
-  width: {$dimensions["width"]}px; 
+#innerWrapper {
+  width: {$dimensions["width"]}px;  
   height: {$dimensions["height"]}px;
+}
+#featImg { 
+  width: {$featImgWidth}px; 
+  height: {$featImgHeight}px;
   border: 1px solid $border;
   background-image: url({$images["bg1"]["url"]}), url({$images["bg2"]["url"]});
   background-position: {$positions[$images["bg1"]["position"]]}, {$positions[$images["bg2"]["position"]]};
@@ -18,8 +27,8 @@ $css = <<<EOD
   border-radius: $radius; -webkit-border-radius: $radius; -moz-border-radius: $radius;
 }
 #overlay {
-  width: {$dimensions["width"]}px; 
-  height: {$dimensions["height"]}px;
+  width: {$featImgWidth}px; 
+  height: {$featImgHeight}px;
   opacity: {$opacities[$images["overlay"]["opacity"]]};
   background: url({$images["overlay"]["url"]}) {$positions[$images["overlay"]["position"]]} no-repeat;  
   background-size: {$sizes[$images["overlay"]["size"]]};

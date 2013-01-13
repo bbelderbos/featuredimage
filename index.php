@@ -13,15 +13,15 @@ include 'dimension_form.php';
 
   <div id="results">
     <h1>Featured Images<span id="progress"></span></h1>
-    <div id="wrapper">
-      <div id="featImg">
-        <h1 id="blogtitle"><?php echo $title["text"]; ?></h1>
-        <div id='overlay'></div>
+    <div id="outerWrapper">
+      <div id="innerWrapper">
+        <div id="featImg">
+          <h1 id="blogtitle"><?php echo $title["text"]; ?></h1>
+          <div id='overlay'></div>
+        </div>
       </div>
-      <!-- todo
-      <a href='#' class='button' id='saveImage'>Download</a>-->
-    </div>
-    
+      <a href='#' class='button' id='saveImage'>Download</a>
+   </div> 
 
     <ul id="prevImg">
       <?php include 'listimages.php'; ?>
