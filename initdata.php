@@ -58,7 +58,7 @@ $border = "#ccc";
 $title = array( 
   "text" => "Title of image",
   "titlecolor" => "#000000", 
-  "size" => "16",
+  "size" => "12",
   "font" => "Limelight", 
   "topoffset" => "60",
 );
