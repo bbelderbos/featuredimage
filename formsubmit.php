@@ -26,8 +26,8 @@ if(isset($_GET['bg1_url']) || isset($_GET['bg2_url']) || isset($_GET['overlay_ur
   }
   fclose($file);
 
-  # write the entry to file
-  if(isset($_GET["storeLink"]) && $_GET["storeLink"] == 1){ 
+  # write the entry to file if storeLink was clicked and user is logged in with fb
+  if(isset($_GET["storeLink"]) && $user){ 
     $actual_link = $_SERVER["REQUEST_URI"];
     $actual_link = str_replace("&storeLink=1", "", $actual_link); # kick this var out
     if(!in_array($actual_link, $storedUrls)){
