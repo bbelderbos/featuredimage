@@ -3,6 +3,7 @@
   // autocomplete progress spinner hides on loading page
   $('.spinner').hide();
   $('#instructions').hide();
+  $.unblockUI();
 
   // this.select(); only worked for FF, the following
   // code works for safari / ipad as well
@@ -65,6 +66,11 @@
     return false;
   });
 
+  
+  // lock page upon submit
+  $('form').submit(function(){
+    $.blockUI({ message: '<h1><img src="i/loader.gif" /> Updating image ...</h1>' });
+  });
 
 
   // fields with color picker
