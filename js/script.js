@@ -36,6 +36,7 @@
 
     var bg1_url = $("#bg1_url").val();
     var bg2_url = $("#bg2_url").val();
+    $('#featImg').css({"background-image": "url("+bg1_url+"), url("+bg2_url+")" });
 
     var bg1_pos = $("#bg1_pos option:selected").val();
     var bg2_pos = $("#bg2_pos option:selected").val();
