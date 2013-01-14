@@ -114,7 +114,7 @@
   // 1.
   $( "#bg1_url" ).autocomplete({
     dataType: "json",
-    source: "google_images_bg.php", 
+    source: "rss_parse.php", 
     minLength: 2,
     search: function(event, ui) { 
       $('.spinner').show();
@@ -130,7 +130,7 @@
   }).data( "autocomplete" )._renderItem = function( ul, item ) {
     var imghtml = '';
     imghtml += "<a id="+item.id+">"; 
-      imghtml += "<img src='"+item.value+"'>"; 
+      imghtml += "<img style='width: 200px;' src='"+item.value+"'>"; 
     imghtml += "</a>";
     return $( "<li></li>" )
       .data( "item.autocomplete", item )
@@ -141,7 +141,7 @@
 
   // 2.
   $( "#bg2_url" ).autocomplete({
-    source: "google_images_bg.php", 
+    source: "rss_parse.php", 
     minLength: 2,
     search: function(event, ui) { 
       $('.spinner').show();
@@ -157,7 +157,7 @@
   }).data( "autocomplete" )._renderItem = function( ul, item ) {
     var imghtml = '';
     imghtml += "<a id="+item.id+">"; 
-      imghtml += "<img src='"+item.value+"'>"; 
+      imghtml += "<img style='width: 200px;' src='"+item.value+"'>"; 
     imghtml += "</a>";
     return $( "<li></li>" )
       .data( "item.autocomplete", item )
@@ -168,7 +168,7 @@
 
   // 3.
   $( "#overlay_url" ).autocomplete({
-    source: "google_images_ol.php", 
+    source: "rss_parse.php", 
     minLength: 2,
     search: function(event, ui) { 
       $('.spinner').show();
@@ -183,7 +183,7 @@
   }).data( "autocomplete" )._renderItem = function( ul, item ) {
     var imghtml = '';
     imghtml += "<a id="+item.id+">"; 
-      imghtml += "<img style='height: 150px;' src='"+item.value+"'>"; 
+      imghtml += "<img style='width: 200px;' src='"+item.value+"'>"; 
     imghtml += "</a>";
     return $( "<li></li>" )
       .data( "item.autocomplete", item )
