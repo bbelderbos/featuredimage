@@ -53,7 +53,7 @@
 
 
     var topoffset = $("#topoffset").val();
-    $('h1#blogtitle').css({"top": topoffset+"px" });
+    $('h1#blogtitle').css({"top": topoffset });
 
     var bg1_url = $("#bg1_url").val();
     var bg2_url = $("#bg2_url").val();

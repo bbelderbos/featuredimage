@@ -29,7 +29,15 @@
     }
     ?>
     </select>
-    <input type="text" class="smallInput auto_submit_item" id="topoffset" name="topoffset" value="<?php echo $title["topoffset"]; ?>">
+    <select id="topoffset" name="topoffset">
+    <?php
+    foreach($topmarginsTitle as $v){
+      echo "<option value='$v' ";
+      if($v == $title["topoffset"]) echo " selected='selected'"; 
+      echo ">$v</option>";
+    }
+    ?>
+    </select>
     <label>3. First background image url</label>
     <input type="text" id="bg1_url" name="bg1_url" value="<?php echo $images["bg1"]["url"]; ?>">
     <label>  - Scale / Position</label>

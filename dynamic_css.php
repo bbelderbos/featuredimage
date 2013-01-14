@@ -37,7 +37,7 @@ h1#blogtitle {
   color: {$title["titlecolor"]};
   font-family: {$fonts[$title["font"]]}; 
   font-size: {$fontsizeBlogtitle}pt;
-  top: {$title["topoffset"]}px; 
+  top: {$title["topoffset"]}; 
 }
 input#create {
   border-radius: $radius; -webkit-border-radius: $radius; -moz-border-radius: $radius;

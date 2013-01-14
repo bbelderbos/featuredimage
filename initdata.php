@@ -35,10 +35,15 @@ $title = array(
   "titlecolor" => "#000000", 
   "size" => "14",
   "font" => "Limelight", 
-  "topoffset" => "60",
+  "topoffset" => "60px",
 );
 
 # $fonts array is set/read from googlefonts.txt (.php)
+
+$topmarginsTitle = array(
+  "0px", "10px", "20px", "30px", "40px", "50px", "60px", "70px", "80px", "90px", "100px", "110px", "120px", "130px", "140px",
+
+);
 
 $images = array(
   "bg1" => array(
