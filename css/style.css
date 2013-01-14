@@ -150,7 +150,6 @@ input#storeLink {
   float: right; 
 }
 input#create {
-  margin-top: -30px;
   width: 120px;
 }
 form#setDimensions {
