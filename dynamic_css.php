@@ -20,8 +20,8 @@ $css = <<<EOD
   height: {$featImgHeight}px;
   border: 1px solid $border;
   background-image: url({$images["bg1"]["url"]}), url({$images["bg2"]["url"]});
-  background-position: {$positions[$images["bg1"]["position"]]}, {$positions[$images["bg2"]["position"]]};
-  background-size: {$sizes[$images["bg1"]["size"]]}, {$sizes[$images["bg2"]["size"]]};
+  background-position: {$images["bg1"]["position"]}, {$images["bg2"]["position"]};
+  background-size: {$images["bg1"]["size"]}, {$images["bg2"]["size"]};
 }
 #featImg, img, #overlay {
   border-radius: $radius; -webkit-border-radius: $radius; -moz-border-radius: $radius;
@@ -29,13 +29,13 @@ $css = <<<EOD
 #overlay {
   width: {$featImgWidth}px; 
   height: {$featImgHeight}px;
-  opacity: {$opacities[$images["overlay"]["opacity"]]};
-  background: url({$images["overlay"]["url"]}) {$positions[$images["overlay"]["position"]]} no-repeat;  
-  background-size: {$sizes[$images["overlay"]["size"]]};
+  opacity: {$images["overlay"]["opacity"]};
+  background: url({$images["overlay"]["url"]}) {$images["overlay"]["position"]} no-repeat;  
+  background-size: {$images["overlay"]["size"]};
 }
 h1#blogtitle {
   color: {$title["titlecolor"]};
-  font-family: {$fonts[$title["font"]]};
+  font-family: {$fonts[$title["font"]]}; 
   font-size: {$fontsizeBlogtitle}pt;
   top: {$title["topoffset"]}px; 
 }
