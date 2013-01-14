@@ -1,5 +1,7 @@
 (function($){
 
+  currentUrl = document.URL;
+
   // autocomplete progress spinner hides on loading page
   $('.spinner').hide();
   $('#instructions').hide();
@@ -15,31 +17,58 @@
   $("input[type='text'], input[type='color'], textarea").live('focus', function () {
     this.setSelectionRange(0, 9999); 
   });
+  
+  //
+  // submit when storeLink is clicked
+  $("#storeLink").change(function() {
+    //$("#addImage").submit();
+  });
 
-	
-  // progress loader upon submit
-  $('form').submit(function() {
-    $("#progress").html("<img src='i/loader.gif'>");
+
+  // update canvas on any field change
+  $("form#addImage *").live('change', function() {
     // $.blockUI({ message: '<h1><img src="i/loader.gif" /> Updating image ...</h1>' });
+
     var bgcolor = $("#bgcolor").val();
+    $('#outerWrapper').css({"background-color": bgcolor });
+
     var titlecolor = $("#titlecolor").val();
+    $('h1#blogtitle').css({"color": titlecolor });
+
     var title = $("#title").val();
+    $('h1#blogtitle').html(title);
+
+    /*
+    // requires new google font link to be loaded
     var font = $("#font option:selected").val();
+    alert(font);
+    $('h1#blogtitle').css({"font-family": '"'+font+'"' });*/
+
     var topoffset = $("#topoffset").val();
-    var bg1_url = $("#bg1_url").val();
+    $('h1#blogtitle').css({"top": topoffset+"px" });
+
+
     var bg1_pos = $("#bg1_pos option:selected").val();
-    var bg1_size = $("#bg1_size option:selected").val();
-    var bg2_url = $("#bg2_url").val();
     var bg2_pos = $("#bg2_pos option:selected").val();
+    $('#featImg').css({"background-position": bg1_pos+", "+bg2_pos });
+
+    var bg1_size = $("#bg1_size option:selected").val();
     var bg2_size = $("#bg2_size option:selected").val();
-    var overlay_url = $("#overlay_url").val();
+    $('#featImg').css({"background-size": bg1_size+", "+bg2_size });
+
     var overlay_pos = $("#overlay_pos option:selected").val();
+    $('#overlay').css({"background-position": overlay_pos });
+
     var overlay_size = $("#overlay_size option:selected").val();
+    $('#overlay').css({"background-size": overlay_size });
+
     var overlay_opacity = $("#overlay_opacity option:selected").val();
+    $('#overlay').css({"opacity": overlay_opacity });
+
     var storeLink = $('#storeLink').is(':checked');
     var create = $("#create").val();
     var fbid = $("#fbid").val();
-    alert(font); // undefined?
+
     return false;
   });
 
@@ -55,6 +84,7 @@
   // google image autocomplete fields (x3)
   // 1.
   $( "#bg1_url" ).autocomplete({
+    dataType: "json",
     source: "google_images_bg.php", 
     minLength: 2,
     search: function(event, ui) { 
@@ -65,16 +95,14 @@
     }, 
     select: function(event, ui) { 
       $('.spinner').show();
-      currentUrl = document.URL;
-      imageLink = encodeURIComponent(ui.item.url);
-      newUrl = currentUrl.replace(/(.*bg1_url=)(?:[^&]*)(&.*)/, "$1"+imageLink+"$2"); 
-      $(this).val(newUrl);
-      location.href=newUrl;
-    },
+      $(this).val(ui.item.value);
+      var bg2_url = $("#bg2_url").val();
+      $('#featImg').css({"background-image": "url("+ui.item.value+"), url("+bg2_url+")" });
+    }
   }).data( "autocomplete" )._renderItem = function( ul, item ) {
     var imghtml = '';
     imghtml += "<a id="+item.id+">"; 
-      imghtml += "<img src='"+item.url+"'>"; 
+      imghtml += "<img src='"+item.value+"'>"; 
     imghtml += "</a>";
     return $( "<li></li>" )
       .data( "item.autocomplete", item )
@@ -95,16 +123,14 @@
     }, 
     select: function(event, ui) { 
       $('.spinner').show();
-      currentUrl = document.URL;
-      imageLink = encodeURIComponent(ui.item.url);
-      newUrl = currentUrl.replace(/(.*bg2_url=)(?:[^&]*)(&.*)/, "$1"+imageLink+"$2"); 
-      $(this).val(newUrl);
-      location.href=newUrl;
+      $(this).val(ui.item.value);
+      var bg1_url = $("#bg1_url").val();
+      $('#featImg').css({"background-image": "url("+bg1_url+"), url("+ui.item.value+")" });
     },
   }).data( "autocomplete" )._renderItem = function( ul, item ) {
     var imghtml = '';
     imghtml += "<a id="+item.id+">"; 
-      imghtml += "<img src='"+item.url+"'>"; 
+      imghtml += "<img src='"+item.value+"'>"; 
     imghtml += "</a>";
     return $( "<li></li>" )
       .data( "item.autocomplete", item )
@@ -125,16 +151,13 @@
     }, 
     select: function(event, ui) { 
       $('.spinner').show();
-      currentUrl = document.URL;
-      imageLink = encodeURIComponent(ui.item.url);
-      newUrl = currentUrl.replace(/(.*overlay_url=)(?:[^&]*)(&.*)/, "$1"+imageLink+"$2"); 
-      $(this).val(newUrl);
-      location.href=newUrl;
+      $(this).val(ui.item.value);
+      $('#overlay').css({"background": "url("+ui.item.value+")" });
     },
   }).data( "autocomplete" )._renderItem = function( ul, item ) {
     var imghtml = '';
     imghtml += "<a id="+item.id+">"; 
-      imghtml += "<img style='height: 150px;' src='"+item.url+"'>"; 
+      imghtml += "<img style='height: 150px;' src='"+item.value+"'>"; 
     imghtml += "</a>";
     return $( "<li></li>" )
       .data( "item.autocomplete", item )
@@ -143,11 +166,6 @@
   };
 
 
-  // if clicking storeLink, autosubmit
-  $("#storeLink").change(function() {
-    $("#addImage").submit();
-  });
-  
 
   // show / hide instructions under save btn
   $("#saveImage").toggle(

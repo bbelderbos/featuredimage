@@ -32,18 +32,18 @@
     <label>  - Scale / Position</label>
     <select id="bg1_pos" name="bg1_pos">
     <?php
-    foreach($positions as $k=>$v){
-      echo "<option value='$k' ";
-      if($k == $images["bg1"]["position"]) echo " selected='selected'";
+    foreach($positions as $v){
+      echo "<option value='$v' ";
+      if($v == $images["bg1"]["position"]) echo " selected='selected'";
       echo ">$v</option>";
     }
     ?>
     </select>
     <select id="bg1_size" name="bg1_size">
     <?php
-    foreach($sizes as $k=>$v){
-      echo "<option value='$k' ";
-      if($k == $images["bg1"]["size"]) echo " selected='selected'";
+    foreach($sizes as $v){
+      echo "<option value='$v' ";
+      if($v == $images["bg1"]["size"]) echo " selected='selected'";
       echo ">$v</option>";
     }
     ?>
@@ -53,18 +53,18 @@
     <label>  - Scale / Position</label>
     <select id="bg2_pos" name="bg2_pos">
     <?php
-    foreach($positions as $k=>$v){
-      echo "<option value='$k' ";
-      if($k == $images["bg2"]["position"]) echo " selected='selected'";
+    foreach($positions as $v){
+      echo "<option value='$v' ";
+      if($v == $images["bg2"]["position"]) echo " selected='selected'";
       echo ">$v</option>";
     }
     ?>
     </select>
     <select id="bg2_size" name="bg2_size">
     <?php
-    foreach($sizes as $k=>$v){
-      echo "<option value='$k' ";
-      if($k == $images["bg2"]["size"]) echo " selected='selected'";
+    foreach($sizes as $v){
+      echo "<option value='$v' ";
+      if($v == $images["bg2"]["size"]) echo " selected='selected'";
       echo ">$v</option>";
     }
     ?>
@@ -74,18 +74,18 @@
     <label>  - Scale / Position</label>
     <select id="overlay_pos" name="overlay_pos">
     <?php
-    foreach($positions as $k=>$v){
-      echo "<option value='$k' ";
-      if($k == $images["overlay"]["position"]) echo " selected='selected'";
+    foreach($positions as $v){
+      echo "<option value='$v' ";
+      if($v == $images["overlay"]["position"]) echo " selected='selected'";
       echo ">$v</option>";
     }
     ?>
     </select>
     <select id="overlay_size" name="overlay_size">
     <?php
-    foreach($sizes as $k=>$v){
-      echo "<option value='$k' ";
-      if($k == $images["overlay"]["size"]) echo " selected='selected'";
+    foreach($sizes as $v){
+      echo "<option value='$v' ";
+      if($v == $images["overlay"]["size"]) echo " selected='selected'";
       echo ">$v</option>";
     }
     ?>
@@ -93,9 +93,9 @@
     <label>  - Opacity of overlay</label>
     <select id="overlay_opacity" name="overlay_opacity">
     <?php
-    foreach($opacities as $k=>$v){
-      echo "<option value='$k' ";
-      if($k == $images["overlay"]["opacity"]) echo " selected='selected'";
+    foreach($opacities as $v){
+      echo "<option value='$v' ";
+      if($v == $images["overlay"]["opacity"]) echo " selected='selected'";
       echo ">$v</option>";
     }
     ?>

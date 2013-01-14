@@ -5,8 +5,8 @@
   <link href='http://fonts.googleapis.com/css?family=Montez' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=<?php echo $title["font"]; ?>' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="jquery-ui-1.9.2.custom/css/ui-lightness/jquery-ui-1.9.2.custom.css" />
   <link rel="stylesheet" href="css/spectrum.css" />
-  <link rel="stylesheet" href="css/jquery-ui.css" />
   <link rel="stylesheet" href="css/style.css" type="text/css" />
 
   <meta property="og:description" content="Start to build your collection of images. This app is optimized for 200px x 200px Blog Featured Images. No more Photoshop needed, this solution is pure CSS." />

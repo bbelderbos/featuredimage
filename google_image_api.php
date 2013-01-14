@@ -1,4 +1,7 @@
 <?php
+if (!isset($_GET["term"])) {
+  return;
+}
 # modified script from https://developers.google.com/image-search/v1/jsondevguide
 $mysite = "http://bobbelderbos.com";
 $search = urlencode($_GET["term"]);
