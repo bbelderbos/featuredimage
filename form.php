@@ -18,7 +18,7 @@
     </div>
     <label>2. Title text in image (blog post)</label>
     <input type="text" id="title" name="title" value="<?php echo $title["text"]; ?>">
-    <label>  - Margin-top (in px) / <a href="http://www.google.com/webfonts">Google Font</a></label>
+    <label>  - Margin-top / <a href="http://www.google.com/webfonts">Google Font</a></label>
     <select id="font" name="font">
     <?php
     foreach($fonts as $k=>$v){
