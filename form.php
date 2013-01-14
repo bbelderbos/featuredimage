@@ -24,7 +24,7 @@
     foreach($fonts as $k=>$v){
       echo "<option value='$k' ";
       if($k == $title["font"]) echo " selected='selected'"; 
-      $displayTitle = str_replace(array("'", ";"), "", $v);
+      $displayTitle = str_replace("'", "", $v);
       echo ">$displayTitle</option>";
     }
     ?>

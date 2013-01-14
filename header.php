@@ -4,7 +4,7 @@
   <title><?php echo $siteName; ?></title>
   <link href='http://fonts.googleapis.com/css?family=Montez' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=<?php echo $title["font"]; ?>' rel='stylesheet' type='text/css'>
+  <link id="titleGoogleFont" href='http://fonts.googleapis.com/css?family=<?php echo $title["font"]; ?>' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="jquery-ui-1.9.2.custom/css/ui-lightness/jquery-ui-1.9.2.custom.css" />
   <link rel="stylesheet" href="css/spectrum.css" />
   <link rel="stylesheet" href="css/style.css" type="text/css" />

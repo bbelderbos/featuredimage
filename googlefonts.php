@@ -16,7 +16,7 @@ while(!feof($file)) {
   $line = trim(fgets($file));
   if($line == '') continue;
   list($css, $font) = explode("::", $line);
-  $fonts[$css] = str_replace('font-family: ', '', $font);
+  $fonts[$css] = str_replace(array('font-family: ', ';'), '', $font);
 }
 
 fclose($file);

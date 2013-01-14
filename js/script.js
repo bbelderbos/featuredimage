@@ -27,9 +27,30 @@
     var title = $("#title").val();
     $('h1#blogtitle').html(title);
 
-    var font = $("#font option:selected").val();
-    /* // requires new google font link to be loaded
-    $('h1#blogtitle').css({"font-family": '"'+font+'"' });*/
+    // fonts are a bit more complicated, the key-value pair needs to be found
+    // then the inline css and google font link need to be updated
+    var fontCss = $("#font option:selected").val();
+    var fontFam = "";
+    $.get('googlefonts.txt', function(data){
+      var fonts = new Array();
+      var lines = data.split("\n");
+      for (var i=0;i<lines.length;i++){
+        var fields = lines[i].split("::");
+        fonts[fields[0]] = fields[1];
+      }
+      // console.log(fonts);
+      fontFam = fonts[fontCss];
+      fontFam = fontFam.replace("font-family: ", "").replace(";", "");
+      googleFontUrl = "http://fonts.googleapis.com/css?family="+fontCss;
+      console.log(fontCss);
+      console.log(fontFam);
+      console.log(googleFontUrl);
+
+      $('h1#blogtitle').css({"font-family": fontFam });
+      //$('h1#blogtitle').css({"font-family": '"'+fontFam+'"' });
+      $("link#titleGoogleFont").attr("href", googleFontUrl);
+    });
+
 
     var topoffset = $("#topoffset").val();
     $('h1#blogtitle').css({"top": topoffset+"px" });
