@@ -13,7 +13,8 @@ include 'dimension_form.php';
   <?php include 'form.php'; ?>
 
   <div id="results">
-    <h1>Featured Images<span id="progress"></span></h1>
+    <h1>Featured Images</h1>
+    <div id="aboutTxt">I built this app to easily create blog featured images. I liked the google search api but I don't want to violate copyright, so I started with my own pics from instagram as input for now (form: # 3.-4.-5. autocomplete fields). I am looking into the Instagram API to expand on this concept so anybody can have a customized experience ... Any ideas, please send me a <a href="http://bobbelderbos.com/contact">message</a>.</div>
     <div id="outerWrapper">
       <div id="innerWrapper">
         <div id="featImg">

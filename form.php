@@ -1,5 +1,5 @@
 <div id="formWrapper">
-  <h1>Create Your Image</h1>
+  <h1>Create Image</h1>
   <!-- need to have url string with placeholder images, otherwise it will not work properly -->
   <ul id="nav">
     <li><a href='#' id="commitChanges">Commit Changes</a></li>

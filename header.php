@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/spectrum.css" />
   <link rel="stylesheet" href="css/style.css" type="text/css" />
 
-  <meta property="og:description" content="Start to build your collection of images. This app is optimized for 200px x 200px Blog Featured Images. No more Photoshop needed, this solution is pure CSS." />
+  <meta property="og:description" content="Start to build your collection of blog images. This pure CSS solution takes my Instagram feed and let you combine images into beautiful 200x200 thumbnails, ideally suited for blog featured images" />
   <meta property="og:url" content="<?php echo $appUrl; ?>" />
   <meta property="og:title" content="<?php echo $siteName; ?>" />
   <meta property="og:type" content="website" />
