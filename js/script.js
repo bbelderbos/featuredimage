@@ -68,6 +68,7 @@
     $('#featImg').css({"background-size": bg1_size+", "+bg2_size });
 
     var overlay_url = $("#overlay_url").val();
+    $('#overlay').css({"background": "url("+overlay_url+")" });
 
     var overlay_pos = $("#overlay_pos option:selected").val();
     $('#overlay').css({"background-position": overlay_pos });
