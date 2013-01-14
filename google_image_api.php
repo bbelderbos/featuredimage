@@ -8,9 +8,10 @@ $search = urlencode($_GET["term"]);
 $ip = $_SERVER["REMOTE_ADDR"];
 $filetype = "png";
 $imagesize = "small|medium|large|xlarge";
+$as_rights = "cc_publicdomain";
 $numresults = "8";
 $url = "https://ajax.googleapis.com/ajax/services/search/images?" .
-       "v=1.0&q=$search&userip=$ip&as_filetype=$filetype&imgsz=$imagesize&rsz=$numresults";
+       "v=1.0&q=$search&userip=$ip&as_filetype=$filetype&imgsz=$imagesize&as_rights=$as_rights&rsz=$numresults";
 #echo $url;
 $return_arr = array();
 
