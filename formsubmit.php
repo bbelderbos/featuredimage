@@ -2,7 +2,7 @@
 # form (start simple)
 if(isset($_GET['bg1_url']) || isset($_GET['bg2_url']) || isset($_GET['overlay_url'])){
   $bgcolor = $_GET['bgcolor'];
-  $title["text"] = ucwords($_GET['title']);
+  $title["text"] = $_GET['title'];
   $title["font"] = $_GET['font'];
   $title["topoffset"] = $_GET['topoffset'];
   $title["titlecolor"] = $_GET['titlecolor'];
