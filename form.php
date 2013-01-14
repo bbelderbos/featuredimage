@@ -2,8 +2,11 @@
   <h1>Create Your Image</h1>
   <!-- need to have url string with placeholder images, otherwise it will not work properly -->
   <ul id="nav">
-    <li><a href='<?php echo $prevUrl; ?>'>Undo last change</a></li>
-    <li><a href='<?php echo $startOverUrl; ?>'>Start over</a></li>
+    <li><a href='#' id="commitChanges">Commit Changes</a></li>
+    <?php if(strstr($currentUrl, "?bgcolor=")): ?>
+      <li><a href='<?php echo $currentUrl; ?>'>Rollback to last Commit</a></li>
+    <?php endif; ?>
+    <li><a href='<?php echo $startOverUrl; ?>'>New image (or Start over)</a></li>
     <li><div class="spinner"><img src="i/mini-loader.gif"></div></li>
   </ul>
 

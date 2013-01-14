@@ -66,6 +66,13 @@
     return false;
   });
 
+
+  // extra submit button
+  $('#commitChanges').click(function(){
+    $("#addImage").submit(); 
+    return false;
+  });
+
   
   // lock page upon submit
   $('form').submit(function(){

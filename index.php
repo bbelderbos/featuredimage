@@ -1,5 +1,6 @@
 <?php
 include 'session.php';
+include 'functions.php';
 include 'googlefonts.php';
 include 'initdata.php'; 
 include 'fbapi.php'; 

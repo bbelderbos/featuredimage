@@ -4,6 +4,7 @@ $admin = "628517118";
 $baseurl = "http://".$_SERVER["HTTP_HOST"];
 $subdir = "featured_image";
 $appUrl = "$baseurl/$subdir/";
+$currentUrl = get_current_url();
 $prevUrl = $_SERVER['HTTP_REFERER'];
 $startOverUrl = $baseurl . "/$subdir/";
 $logfile = "images.txt";
