@@ -24,7 +24,7 @@ foreach($x->channel->item as $entry) {
 if(empty($return_arr)) {
   $item = array();
   $item['id'] = ++$i;
-  $item['value'] = "i/no_images.png";
+  $item['value'] = "i/nothing_found.png";
   array_push($return_arr, $item);
 }
 

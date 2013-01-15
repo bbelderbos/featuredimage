@@ -6,6 +6,6 @@
 <?php else: ?>
   <input class="button" id="create" name="create" value="Commit Changes" style="margin-top: 20px;" type='submit'>
   <div id="loginLinkInForm">
-    <div class="fb-login-button" data-show-faces="true" data-width="220" data-max-rows="1">Save your Images</div>              
+    <div class="fb-login-button" data-show-faces="false" data-width="220" data-max-rows="1">Save your Images</div>              
   </div>
 <?php endif; ?>

@@ -132,7 +132,7 @@
   }).data( "autocomplete" )._renderItem = function( ul, item ) {
     var imghtml = '';
     imghtml += "<a id="+item.id+">"; 
-      imghtml += "<img style='width: 200px;' src='"+item.value+"'>"; 
+      imghtml += "<img style='height: 100px;' src='"+item.value+"'>"; 
     imghtml += "</a>";
     return $( "<li></li>" )
       .data( "item.autocomplete", item )
@@ -159,7 +159,7 @@
   }).data( "autocomplete" )._renderItem = function( ul, item ) {
     var imghtml = '';
     imghtml += "<a id="+item.id+">"; 
-      imghtml += "<img style='width: 200px;' src='"+item.value+"'>"; 
+      imghtml += "<img style='height: 100px;' src='"+item.value+"'>"; 
     imghtml += "</a>";
     return $( "<li></li>" )
       .data( "item.autocomplete", item )
@@ -185,7 +185,7 @@
   }).data( "autocomplete" )._renderItem = function( ul, item ) {
     var imghtml = '';
     imghtml += "<a id="+item.id+">"; 
-      imghtml += "<img style='width: 200px;' src='"+item.value+"'>"; 
+      imghtml += "<img style='height: 100px;' src='"+item.value+"'>"; 
     imghtml += "</a>";
     return $( "<li></li>" )
       .data( "item.autocomplete", item )
