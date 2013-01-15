@@ -17,6 +17,8 @@
 
   // update canvas on any field change
   $("form#addImage *").live('change', function() {
+    // reset spinner 
+    $('.spinner').hide();
 
     var bgcolor = $("#bgcolor").val();
     $('#outerWrapper').css({"background-color": bgcolor });
