@@ -27,7 +27,7 @@ li {
 #loginLinkInForm {
   clear: both;
   position: relative; 
-  bottom: 30px; left: 0px;
+  bottom: 35px; left: 0px;
 }
 #nav, #nav li, #outerWrapper, ul#prevImg, ul#prevImg li, form, input, select {  
   border: 1px solid #ddd;
