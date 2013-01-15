@@ -59,7 +59,7 @@ li {
 }
 #results {
   width: 550px;
-  margin: 20px 0 0 0;
+  margin: 100px 0 0 0;
   float: left;
 }
 #innerWrapper {
@@ -69,13 +69,13 @@ li {
 #outerWrapper {
   float: left;
   overflow: hidden;
-  margin: 75px 0;
+  margin-bottom: 15px;
 }
 ul#prevImg {
   width: 230px;
   padding: 5px;
   float: left; 
-  margin: 75px 0 0 20px;
+  margin-left: 20px;
 }
 ul#prevImg li {
   width: 100px;
