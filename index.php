@@ -29,11 +29,9 @@ include 'dimension_form.php';
         <input type="text" readonly="readonly" value="Shift-Command-4">
         <label>** I am still looking for a way to convert the html/css div to an image ...</label>
       </div>
-   </div> 
+    </div> 
 
-    <ul id="prevImg">
-      <?php include 'listimages.php'; ?>
-    </ul>
+    <?php if($user) include 'listimages.php'; ?>
   </div>
   
 <?php include 'footer.php'; ?>

@@ -7,7 +7,6 @@ $appUrl = "$baseurl/$subdir/";
 $currentUrl = get_current_url();
 $prevUrl = $_SERVER['HTTP_REFERER'];
 $startOverUrl = $baseurl . "/$subdir/";
-$logfile = "images.txt";
 $bgcolor = "#e9ebde"; # color of background frame around images on my blog
 $dimensions = array(
   # rfe - scale, but for now I want to use it for blog featured images which are 200x200
@@ -21,7 +20,7 @@ $wrapper_dimensions = array(
 
 // form values
 $positions = array(
-  "left top", "left center", "left bottom", "right top", "right center", "right bottom", "center top", "center center", "center bottom", "25% 25%", "25% 50%", "25% 75%", "50% 25%", "50% 50%", "50% 75%", "75% 25%", "75% 50%", "75% 75%", "10% 10%", "25% 25%", "40% 40%", "50% 50%", "60% 60%", "75% 75%", "90% 90%",
+  "left top", "left center", "left bottom", "right top", "right center", "right bottom", "center top", "center center", "center bottom", "10% 10%", "25% 25%", "25% 50%", "25% 75%", "50% 25%", "50% 50%", "50% 75%", "75% 25%", "75% 50%", "75% 75%", "10% 10%", "25% 25%", "40% 40%", "50% 50%", "60% 60%", "75% 75%", "90% 90%",
 );
 $sizes = array(
   "10%", "25%", "40%", "50%", "75%", "100%", "125%", "150%", "200%", "300%", "400%", "500%", "1000%",
