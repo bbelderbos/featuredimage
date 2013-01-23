@@ -1,10 +1,13 @@
 <?php  
+session_start();
+$user = $_SESSION['ig_user'] ;
+if(!$user) $user = "bbelderbos";
+
 if (!isset($_GET["term"])) {
   return;
 }
 $search = strtolower($_GET["term"]);
 
-$user = "bbelderbos";
 $feed_url = "http://statigr.am/feed/$user";
 $return_arr = array();
 

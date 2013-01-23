@@ -12,7 +12,8 @@ if($json->responseData->results){
     array_push($return_arr, $entry); 
   }
 } else {
-  array_push($return_arr, "No results found");
+  $entry['value'] = "i/nothing_found.png";
+  array_push($return_arr, $entry);
 }
 
 echo json_encode($return_arr);

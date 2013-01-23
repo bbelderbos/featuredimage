@@ -22,6 +22,4 @@
   </style>
 </head>
 <body>
-<div id="aboutTxt">
-Hi, I built this app to easily create featured images for my blog. I liked to use the Google Search API but I don't want to violate copyright, so I started with my own instagram feed as input (see fields # 3.-4.-5. when typing). I am looking into the Instagram API to expand on this concept so anybody could login and use his/her feed with this app ... Any other ideas, please send me a <a target="_blank" href="http://bobbelderbos.com/contact">message</a>.
-</div>
+<div id="aboutTxt"></div>

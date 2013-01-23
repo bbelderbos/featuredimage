@@ -116,7 +116,7 @@
   // 1.
   $( "#bg1_url" ).autocomplete({
     dataType: "json",
-    source: "rss_parse.php", 
+    source: "google_images_bg.php", 
     minLength: 2,
     search: function(event, ui) { 
       $('.spinner').show();
@@ -143,7 +143,7 @@
 
   // 2.
   $( "#bg2_url" ).autocomplete({
-    source: "rss_parse.php", 
+    source: "google_images_bg.php", 
     minLength: 2,
     search: function(event, ui) { 
       $('.spinner').show();
@@ -170,7 +170,7 @@
 
   // 3.
   $( "#overlay_url" ).autocomplete({
-    source: "rss_parse.php", 
+    source: "google_images_ol.php", 
     minLength: 2,
     search: function(event, ui) { 
       $('.spinner').show();
@@ -216,7 +216,7 @@ function input_is_url(str){
   }
 }
 
-function googleplusbtn(url) {                                                                                                                     
+function googleplusbtn(url) {
   sharelink = "https://plus.google.com/share?url="+url;
   newwindow=window.open(sharelink,'name','height=400,width=600');
   if (window.focus) {newwindow.focus()}
