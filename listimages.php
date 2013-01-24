@@ -19,6 +19,7 @@ if(is_file($logfile)){
         $title = substr($title, 0, 15)."..";
       } 
       $html = "<li><a href='$baseurl$url' title='$moreInfo'>".urldecode($title)."</a></li>";
+      $userImages[$title] = $html; 
 
       # keep track of processed urls
       array_push($seen, $url);
