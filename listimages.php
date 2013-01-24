@@ -2,7 +2,6 @@
 if(is_file($logfile)){
   $file = fopen($logfile, "r") or exit("Unable to open file!");
   $seen = array();
-  $allImages = array();
   $userImages = array();
 
   while(!feof($file)) {
@@ -12,11 +11,6 @@ if(is_file($logfile)){
     # extract title
     $title = preg_replace('/.*title=([^&]+).*/', '\1', $url);
     $title = str_replace('+', ' ', $title);
-    if(strstr($url, "fbid=")){
-      $fbid = preg_replace('/.*fbid=(.*?)(&|$)/', '\1', $url);
-    } else {
-      $fbid = False;
-    }
 
     # only unique urls
     if(!in_array($url, $seen)){ 
@@ -25,14 +19,6 @@ if(is_file($logfile)){
         $title = substr($title, 0, 15)."..";
       } 
       $html = "<li><a href='$baseurl$url' title='$moreInfo'>".urldecode($title)."</a></li>";
-
-      # if fb id in link and == logged in user show in "my images", else in everybody's images
-      # if($fbid == $user){ # does not work
-      if(strstr($fbid, $user)){ 
-        $userImages[$title] = $html; 
-      } else { 
-        $allImages[$title] = $html;
-      }
 
       # keep track of processed urls
       array_push($seen, $url);
