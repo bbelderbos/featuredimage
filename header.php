@@ -22,4 +22,4 @@
   </style>
 </head>
 <body>
-<div id="aboutTxt"></div>
+<div id="aboutTxt"><h1><?php echo $siteName; ?></h1></div>
