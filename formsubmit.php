@@ -1,5 +1,6 @@
 <?php
 # form (start simple)
+$logfile = "user_images/${user}_images.txt";
 if(isset($_GET['bg1_url']) || isset($_GET['bg2_url']) || isset($_GET['overlay_url'])){
   $bgcolor = $_GET['bgcolor'];
   $title["text"] = $_GET['title'];
@@ -19,7 +20,6 @@ if(isset($_GET['bg1_url']) || isset($_GET['bg2_url']) || isset($_GET['overlay_ur
 
   # get stored urls
   if($user){
-    $logfile = "user_images/${user}_images.txt";
     $storedUrls = array();
     if(is_file($logfile)){
       $file = fopen($logfile, "r") or exit("Unable to open file!");
