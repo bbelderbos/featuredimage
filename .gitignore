@@ -3,3 +3,4 @@ fbkey.php
 experiment/*
 *swp
 user_images/*
+!user_images/index.html
