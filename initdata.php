@@ -34,7 +34,7 @@ $title = array(
   "titlecolor" => "#000000", 
   "size" => "14",
   "font" => "Open+Sans", 
-  "topoffset" => "80px",
+  "topoffset" => "60px",
 );
 
 # $fonts array is set/read from googlefonts.txt (.php)
