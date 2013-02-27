@@ -7,7 +7,7 @@ $appUrl = "$baseurl/$subdir/";
 $currentUrl = get_current_url();
 $prevUrl = $_SERVER['HTTP_REFERER'];
 $startOverUrl = $baseurl . "/$subdir/";
-$bgcolor = "#e9ebde"; # color of background frame around images on my blog
+$bgcolor = "#eff1e1"; # color of background frame around images on my blog
 $dimensions = array(
   # rfe - scale, but for now I want to use it for blog featured images which are 200x200
   "width" => $_SESSION['width'], 
