@@ -33,8 +33,8 @@ $title = array(
   "text" => "Title of image",
   "titlecolor" => "#000000", 
   "size" => "14",
-  "font" => "Limelight", 
-  "topoffset" => "60px",
+  "font" => "Open+Sans", 
+  "topoffset" => "80px",
 );
 
 # $fonts array is set/read from googlefonts.txt (.php)
