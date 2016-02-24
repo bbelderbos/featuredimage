@@ -14,7 +14,7 @@
     <label>1. Canvas background / Title color</label>
     <div id="colorHandles" style="position: relative; left: 12px; padding: 5px 0;">
       <input type="color" class="smallInput" id="bgcolor" name="bgcolor" value="<?php echo $bgcolor; ?>">
-      <input type="color" class="smallInput" id="titlecolor" id="titlecolor" name="titlecolor" value="<?php echo $title["titlecolor"]; ?>">
+      <input type="color" class="smallInput" id="titlecolor" name="titlecolor" value="<?php echo $title["titlecolor"]; ?>">
     </div>
     <label>2. Title text in image (blog post)</label>
     <input type="text" id="title" name="title" value="<?php echo $title["text"]; ?>">

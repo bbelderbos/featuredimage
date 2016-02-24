@@ -7,7 +7,7 @@ $appUrl = "$baseurl/$subdir/";
 $currentUrl = get_current_url();
 $prevUrl = $_SERVER['HTTP_REFERER'];
 $startOverUrl = $baseurl . "/$subdir/";
-$bgcolor = "#fff"; 
+$bgcolor = "#FFFFFF"; 
 $dimensions = array(
   # rfe - scale, but for now I want to use it for blog featured images which are 200x200
   "width" => $_SESSION['width'], 
@@ -33,7 +33,7 @@ $title = array(
   "text" => "Title of image",
   "titlecolor" => "#000000", 
   "size" => "14",
-  "font" => "Open+Sans", 
+  "font" => "Ubuntu", 
   "topoffset" => "60px",
 );
 
