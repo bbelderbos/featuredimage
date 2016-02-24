@@ -1,6 +1,6 @@
 <?php
 # depending the canvas size the font size of title is increased proportionally
-$fontsizeBlogtitle = $title["size"] * $fontScaling;
+$fontsizeBlogtitle = $title["size"];// * $fontScaling;
 # outerwrapper is width specified, inner is -11 (accounting for border of 1px)
 # ff printscreen = screenshot test.png --selector #innerWrapper
 $featImgWidth = $dimensions["width"] - 11;
@@ -10,6 +10,7 @@ $css = <<<EOD
   background-color: $bgcolor;
   width: {$wrapper_dimensions["width"]}px; 
   height: {$wrapper_dimensions["height"]}px;
+  min-height: 500px;
 }
 #innerWrapper {
   width: {$dimensions["width"]}px;  
