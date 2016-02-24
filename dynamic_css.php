@@ -10,7 +10,7 @@ $css = <<<EOD
   background-color: $bgcolor;
   width: {$wrapper_dimensions["width"]}px; 
   height: {$wrapper_dimensions["height"]}px;
-  min-height: 500px;
+  min-height: 430px;
 }
 #innerWrapper {
   width: {$dimensions["width"]}px;  
