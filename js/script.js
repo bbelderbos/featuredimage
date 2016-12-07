@@ -114,13 +114,6 @@ function googleplusbtn(url) {
   });
 
 
-  // extra submit button
-  $('#commitChanges').click(function(){
-    $("#addImage").submit(); 
-    return false;
-  });
-
-  
   // lock page upon submit
   $('form').submit(function(){
     $.blockUI({ message: '<h1><img src="i/loader.gif" /> Updating image ...</h1>' });
@@ -133,88 +126,6 @@ function googleplusbtn(url) {
     showInput: true,
   });
 
-
-  // google image autocomplete fields (x3)
-  // 1.
-  $( "#bg1_url" ).autocomplete({
-    dataType: "json",
-    source: "google_images_bg.php", 
-    minLength: 2,
-    search: function(event, ui) { 
-      $('.spinner').show();
-    },
-    open: function(event, ui) {
-      $('.spinner').hide();
-    }, 
-    select: function(event, ui) { 
-      $(this).val(ui.item.value);
-      var bg2_url = $("#bg2_url").val();
-      $('#featImg').css({"background-image": "url("+ui.item.value+"), url("+bg2_url+")" });
-    }
-  }).data( "autocomplete" )._renderItem = function( ul, item ) {
-    var imghtml = '';
-    imghtml += "<a id="+item.id+">"; 
-      imghtml += "<img style='height: 100px;' src='"+item.value+"'>"; 
-    imghtml += "</a>";
-    return $( "<li></li>" )
-      .data( "item.autocomplete", item )
-      .append(imghtml)
-      .appendTo(ul);
-  };
-
-
-  // 2.
-  $( "#bg2_url" ).autocomplete({
-    source: "google_images_bg.php", 
-    minLength: 2,
-    search: function(event, ui) { 
-      $('.spinner').show();
-      $('.spinner').show();
-    },
-    open: function(event, ui) {
-      $('.spinner').hide();
-    }, 
-    select: function(event, ui) { 
-      $(this).val(ui.item.value);
-      var bg1_url = $("#bg1_url").val();
-      $('#featImg').css({"background-image": "url("+bg1_url+"), url("+ui.item.value+")" });
-    },
-  }).data( "autocomplete" )._renderItem = function( ul, item ) {
-    var imghtml = '';
-    imghtml += "<a id="+item.id+">"; 
-      imghtml += "<img style='height: 100px;' src='"+item.value+"'>"; 
-    imghtml += "</a>";
-    return $( "<li></li>" )
-      .data( "item.autocomplete", item )
-      .append(imghtml)
-      .appendTo(ul);
-  };
-
-
-  // 3.
-  $( "#overlay_url" ).autocomplete({
-    source: "google_images_ol.php", 
-    minLength: 2,
-    search: function(event, ui) { 
-      $('.spinner').show();
-    },
-    open: function(event, ui) {
-      $('.spinner').hide();
-    }, 
-    select: function(event, ui) { 
-      $(this).val(ui.item.value);
-      $('#overlay').css({"background": "url("+ui.item.value+")" });
-    },
-  }).data( "autocomplete" )._renderItem = function( ul, item ) {
-    var imghtml = '';
-    imghtml += "<a id="+item.id+">"; 
-      imghtml += "<img style='height: 100px;' src='"+item.value+"'>"; 
-    imghtml += "</a>";
-    return $( "<li></li>" )
-      .data( "item.autocomplete", item )
-      .append(imghtml)
-      .appendTo(ul);
-  };
 
   $("#btnSave").click(function() { 
     $.blockUI({ message: '<h1><img src="i/loader.gif" />Generating image ...</h1>' });

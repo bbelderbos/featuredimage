@@ -22,4 +22,4 @@
 <body>
 <div class="overlay">
 
-<div id="aboutTxt"><h1><?php echo $siteName; ?></h1></div>
+<div id="aboutTxt"><h1><a href="<?php echo $appUrl; ?>" title="reset/ home"><?php echo $siteName; ?></a></h1></div>

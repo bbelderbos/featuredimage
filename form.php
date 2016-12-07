@@ -39,7 +39,7 @@
     </select>
     <label class="newsection">3. First background image url</label>
     <input class="newsection" type="text" id="bg1_url" name="bg1_url" value="<?php echo $images["bg1"]["url"]; ?>">
-    <label>  - Scale / Position</label>
+    <label>  - Scale / Position <a id="more" href="#">more ...</a></label>
     <select id="bg1_pos" name="bg1_pos">
     <?php
     foreach($positions as $v){
@@ -58,7 +58,7 @@
     }
     ?>
     </select>
-	<a id="more" href="#">more ...</a>
+	
     <div id="moreFields">
 		<label class="newsection">4. Second background image url</label>
 		<input class="newsection" type="text" id="bg2_url" name="bg2_url" value="<?php echo $images["bg2"]["url"]; ?>">

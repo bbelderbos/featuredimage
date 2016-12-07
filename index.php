@@ -17,7 +17,7 @@ include 'dimension_form.php';
           <div id='overlay'></div>
         </div>
       </div>
-	  <input class="btn" type="button" id="btnSave" value="Save image"/>
+	  <input class="btn" type="submit" id="btnSave" value="Save image"/>
       <div id="img-out"></div>
     </div> 
   </div>

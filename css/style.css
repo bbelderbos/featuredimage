@@ -203,8 +203,10 @@ a#saveImage {
   text-align: left;
   background-color: #333;
   border-top: 1px solid #666;
-  color: #fff;
   font-size: 150%; 
+}
+#aboutTxt h1 a {
+  color: #fff;
 }
 .myimages {
   font-size: 150%;
@@ -265,5 +267,6 @@ body:after{
 }
 
 #more {
+	clear: both;
 	margin-left: 10px;
 }
