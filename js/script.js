@@ -1,8 +1,33 @@
+//Creating dynamic link that automatically click
+function downloadURI(uri, name) {
+	var link = document.createElement("a");
+	link.download = name;
+	link.href = uri;
+	link.click();
+	//after creating link you should delete dynamic link
+	//clearDynamicLink(link); 
+}
+
+
+function input_is_url(str){
+  if(str.indexOf('http://') == 0) { 
+    return true; 
+  } else {
+    return false; 
+  }
+}
+
+function googleplusbtn(url) {
+  sharelink = "https://plus.google.com/share?url="+url;
+  newwindow=window.open(sharelink,'name','height=400,width=600');
+  if (window.focus) {newwindow.focus()}
+  return false;
+}
+
 (function($){
 
   // autocomplete progress spinner hides on loading page
   $('.spinner').hide();
-  $('#instructions').hide();
   $.unblockUI();
 
   // this.select(); only worked for FF, the following
@@ -147,6 +172,7 @@
     minLength: 2,
     search: function(event, ui) { 
       $('.spinner').show();
+      $('.spinner').show();
     },
     open: function(event, ui) {
       $('.spinner').hide();
@@ -193,11 +219,8 @@
       .appendTo(ul);
   };
 
-
-
-
   $("#btnSave").click(function() { 
-    $('.spinner').show();
+    $.blockUI({ message: '<h1><img src="i/loader.gif" />Generating image ...</h1>' });
 
 	html2canvas($("#featImg"), {
 
@@ -211,44 +234,16 @@
 			document.body.appendChild(canvas);
 
 			// Convert and download as image 
-			//Canvas2Image.saveAsPNG(canvas); 
-			$("#img-out").append(canvas);
+			$("#img-out").html(canvas);
 
-			// Clean up 
-			//document.body.removeChild(canvas);
-			var myImage = canvas.toDataURL("image/png");
-			downloadURI("data:" + myImage, "yourImage.png");
+			$.unblockUI();
+
+			Canvas2Image.saveAsPNG(canvas); 
+			//var myImage = canvas.toDataURL("image/png");
+			//downloadURI("data:" + myImage, "yourImage.png");
 		}
 	});
-
-    $('.spinner').hide();
 
   });
 
 })(jQuery);
-
-//Creating dynamic link that automatically click
-function downloadURI(uri, name) {
-	var link = document.createElement("a");
-	link.download = name;
-	link.href = uri;
-	link.click();
-	//after creating link you should delete dynamic link
-	//clearDynamicLink(link); 
-}
-
-
-function input_is_url(str){
-  if(str.indexOf('http://') == 0) { 
-    return true; 
-  } else {
-    return false; 
-  }
-}
-
-function googleplusbtn(url) {
-  sharelink = "https://plus.google.com/share?url="+url;
-  newwindow=window.open(sharelink,'name','height=400,width=600');
-  if (window.focus) {newwindow.focus()}
-  return false;
-}
