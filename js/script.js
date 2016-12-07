@@ -208,6 +208,9 @@
 
   $("#btnSave").click(function() { 
 	html2canvas($("#featImg"), {
+
+        $('.spinner').show();
+
 		"logging": true, //Enable log (use Web Console for get Errors and Warnings)
 		allowTaint: true,
 
@@ -225,6 +228,8 @@
 			//document.body.removeChild(canvas);
 			var myImage = canvas.toDataURL("image/png");
 			downloadURI("data:" + myImage, "yourImage.png");
+
+            $('.spinner').hide();
 		}
 	});
   });
