@@ -1,14 +1,3 @@
-//Creating dynamic link that automatically click
-function downloadURI(uri, name) {
-	var link = document.createElement("a");
-	link.download = name;
-	link.href = uri;
-	link.click();
-	//after creating link you should delete dynamic link
-	//clearDynamicLink(link); 
-}
-
-
 function input_is_url(str){
   if(str.indexOf('http://') == 0) { 
     return true; 
@@ -222,6 +211,9 @@ function googleplusbtn(url) {
   $("#btnSave").click(function() { 
     $.blockUI({ message: '<h1><img src="i/loader.gif" />Generating image ...</h1>' });
 
+	var ext = ".jpg";
+	var imageFileName = $('h1#blogtitle').text().toLowerCase().replace(/[^a-zA-Z0-9]+/g, "-") + ext;
+
 	html2canvas($("#featImg"), {
 
 		"logging": true, //Enable log (use Web Console for get Errors and Warnings)
@@ -238,9 +230,14 @@ function googleplusbtn(url) {
 
 			$.unblockUI();
 
-			Canvas2Image.saveAsPNG(canvas); 
-			//var myImage = canvas.toDataURL("image/png");
-			//downloadURI("data:" + myImage, "yourImage.png");
+			//Canvas2Image.saveAsPNG(canvas); 
+
+			var a = $("<a>").attr("href", canvas.toDataURL('image/png'))
+            .attr("download", imageFileName)
+            .appendTo("body");
+            a[0].click();
+            a.remove();
+
 		}
 	});
 
