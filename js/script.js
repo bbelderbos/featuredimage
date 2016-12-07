@@ -195,16 +195,6 @@
 
 
 
-  // show / hide instructions under save btn
-  $("#saveImage").toggle(
-    function () {
-      $('#instructions').slideDown();
-    },
-    function () {
-      $('#instructions').slideUp();
-    }
-  );
-
 
   $("#btnSave").click(function() { 
     $('.spinner').show();
