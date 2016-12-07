@@ -219,7 +219,7 @@ function googleplusbtn(url) {
 		"logging": true, //Enable log (use Web Console for get Errors and Warnings)
 		allowTaint: true,
 
-		// "proxy":"html2canvasproxy.php", // allowTaint works better
+//		"proxy":"html2canvasproxy.php", // allowTaint works better
 
 		onrendered: function(canvas) {
 			theCanvas = canvas;
@@ -232,7 +232,11 @@ function googleplusbtn(url) {
 
 			//Canvas2Image.saveAsPNG(canvas); 
 
-			var a = $("<a>").attr("href", canvas.toDataURL('image/png'))
+			var img = canvas.toDataURL('image/png')
+			img.crossOrigin="anonymous";
+			img.src="yourImage.png";
+
+			var a = $("<a>").attr("href", img.src)
             .attr("download", imageFileName)
             .appendTo("body");
             a[0].click();
