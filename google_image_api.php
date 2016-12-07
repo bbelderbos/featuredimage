@@ -1,7 +1,6 @@
 <?php
 require_once 'functions.php'; 
 require_once 'initdata.php'; 
-require_once 'fbapi.php'; 
 
 if (!isset($_GET["term"])) {
   return;

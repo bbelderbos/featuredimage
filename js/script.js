@@ -15,6 +15,14 @@ function googleplusbtn(url) {
 
 (function($){
 
+  $('#moreFields').hide();
+
+  $('#more').click(function(){
+	var $this = $(this);
+  	$this.text($this.text() == "more ..." ? "less ..." : "more ...");
+    $("#moreFields").slideToggle(); 
+  });
+
   // autocomplete progress spinner hides on loading page
   $('.spinner').hide();
   $.unblockUI();

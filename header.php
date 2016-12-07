@@ -9,17 +9,17 @@
   <link rel="stylesheet" href="css/spectrum.css" />
   <link rel="stylesheet" href="css/style.css" type="text/css" />
 
-  <meta property="og:description" content="Start to build your collection of blog images. This pure CSS solution takes my Instagram feed and let you combine images into beautiful 200x200 thumbnails, ideally suited for blog featured images" />
+  <meta property="og:description" content="Start to build your collection of blog images. This pure CSS/JS solution takes my Instagram feed and let you combine images into beautiful 200x200 thumbnails, ideally suited for blog featured images" />
   <meta property="og:url" content="<?php echo $appUrl; ?>" />
   <meta property="og:title" content="<?php echo $siteName; ?>" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="<?php echo $appUrl."i/logo.png"; ?>" />
-  <meta property="fb:admins" content="<?php echo $admin; ?>" />
-  <meta property="fb:app_id" content="<?php echo $facebook->getAppID() ?>">
 
   <style>
     <?php include 'dynamic_css.php'; ?>
   </style>
 </head>
 <body>
+<div class="overlay">
+
 <div id="aboutTxt"><h1><?php echo $siteName; ?></h1></div>

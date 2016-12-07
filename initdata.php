@@ -1,11 +1,10 @@
 <?php
-$siteName = "CSS Featured Image Creator";
+$siteName = "Featured Image Creator";
 $admin = "628517118";
 $baseurl = "http://".$_SERVER["HTTP_HOST"];
 $subdir = "featured_image";
 $appUrl = "$baseurl/$subdir/";
 $currentUrl = get_current_url();
-$prevUrl = $_SERVER['HTTP_REFERER'];
 $startOverUrl = $baseurl . "/$subdir/";
 $bgcolor = "#FFFFFF"; 
 $dimensions = array(
@@ -34,7 +33,7 @@ $title = array(
   "titlecolor" => "#000000", 
   "size" => "14",
   "font" => "Ubuntu", 
-  "topoffset" => "60px",
+  "topoffset" => "20px",
 );
 
 # $fonts array is set/read from googlefonts.txt (.php)
@@ -44,22 +43,26 @@ $topmarginsTitle = array(
 
 );
 
+$defaultPos = "center center";
+$defaultSize = "100%";
+$defaultOpacity = "0.5";
+
 $images = array(
   "bg1" => array(
     "url" => "", 
-    "position" => "left top",
-    "size" => "50%",
+    "position" => $defaultPos,
+    "size" => $defaultSize,
   ),
   "bg2" => array(
     "url" => "", 
-    "position" => "right bottom",
-    "size" => "50%",
+    "position" => $defaultPos,
+    "size" => $defaultSize,
   ),
   "overlay" => array(
     "url" => "", 
-    "position" => "center center",
-    "size" => "100%",
-    "opacity" => "0.3",
+    "position" => $defaultPos,
+    "size" => $defaultSize,
+    "opacity" => $defaultOpacity,
   ),
 );
 ?>

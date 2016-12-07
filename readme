@@ -1,6 +1,0 @@
-required steps
-
-create fbkey.php with fb app codes
-
-import fb sdk which was not put under git control somehow
-git clone https://github.com/facebook/facebook-php-sdk.git
