@@ -20,6 +20,9 @@ include 'dimension_form.php';
           <div id='overlay'></div>
         </div>
       </div>
+<input type="button" id="btnSave" value="Save PNG"/>
+
+<div id="img-out"></div>
       <a href='#' class='button' id='saveImage'>Download</a>
       <div id="instructions">
         <label>Firefox Dev Toolbar - after shift+F2, copy/paste:</label>
