@@ -206,44 +206,28 @@
   );
 
 
-    $("#btnSave").click(function() { 
-        html2canvas($("#featImg"), {
- 					"logging": true, //Enable log (use Web Console for get Errors and Warnings)
-                    "proxy":"html2canvasproxy.php",
-                    "onrendered": function(canvas) {
-                        var img = new Image();
-                        img.onload = function() {
-                            img.onload = null;
-                            document.body.appendChild(img);
-                        };
-                        img.onerror = function() {
-                            img.onerror = null;
-                            if(window.console.log) {
-                                window.console.log("Not loaded image from canvas.toDataURL");
-                            } else {
-                                alert("Not loaded image from canvas.toDataURL");
-                            }
-                        };
-                		$("#img-out").append(canvas);
-                        //img.src = canvas.toDataURL("image/png");
-                		var myImage = canvas.toDataURL("image/png");
-						downloadURI("data:" + myImage, "yourImage.png");
-                    }
-            /*onrendered: function(canvas) {
-                theCanvas = canvas;
-                document.body.appendChild(canvas);
+  $("#btnSave").click(function() { 
+	html2canvas($("#featImg"), {
+		"logging": true, //Enable log (use Web Console for get Errors and Warnings)
+		allowTaint: true,
 
-                // Convert and download as image 
-                //Canvas2Image.saveAsPNG(canvas); 
-                $("#img-out").append(canvas);
+		// "proxy":"html2canvasproxy.php", // allowTaint works better
 
-                // Clean up 
-                //document.body.removeChild(canvas);
-                var myImage = canvas.toDataURL("image/png");
-				downloadURI("data:" + myImage, "yourImage.png");
-            }*/
-        });
-    });
+		onrendered: function(canvas) {
+			theCanvas = canvas;
+			document.body.appendChild(canvas);
+
+			// Convert and download as image 
+			//Canvas2Image.saveAsPNG(canvas); 
+			$("#img-out").append(canvas);
+
+			// Clean up 
+			//document.body.removeChild(canvas);
+			var myImage = canvas.toDataURL("image/png");
+			downloadURI("data:" + myImage, "yourImage.png");
+		}
+	});
+  });
 
 })(jQuery);
 
