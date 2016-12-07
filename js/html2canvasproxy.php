@@ -14,7 +14,7 @@ ini_set('display_errors', 'Off');
 define('PATH', 'images');         //relative folder where the images are saved
 define('PATH_PERMISSION', 0666);  //use 644 or 666 for remove execution for prevent sploits
 define('CCACHE', 60 * 5 * 1000);  //Limit access-control and cache, define 0/false/null/-1 to not use "http header cache"
-define('TIMEOUT', 30);            //Timeout from load Socket
+define('TIMEOUT', 10);            //Timeout from load Socket
 define('MAX_LOOP', 10);           //Configure loop limit for redirects (location header)
 define('CROSS_DOMAIN', true);    //Enable use of "data URI scheme"
 define('PREFER_CURL', true);      //Enable curl if avaliable or disable
