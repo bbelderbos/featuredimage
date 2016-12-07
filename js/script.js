@@ -219,10 +219,18 @@ function googleplusbtn(url) {
 		"logging": true, //Enable log (use Web Console for get Errors and Warnings)
 		allowTaint: true,
 
+		// useCORS: true,
 		// "proxy":"html2canvasproxy.php", // allowTaint works better
 
 		onrendered: function(canvas) {
-			theCanvas = canvas;
+
+			/*var img = new Image;
+			img.src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/pie.png";
+			img.crossOrigin = "Anonymous";
+			img.src =canvas.toDataURL();
+						alert(img.src);
+			*/
+
 			document.body.appendChild(canvas);
 
 			// Convert and download as image 
@@ -232,11 +240,11 @@ function googleplusbtn(url) {
 
 			//Canvas2Image.saveAsPNG(canvas); 
 
-			var a = $("<a>").attr("href", canvas.toDataURL('image/png'))
+			/*var a = $("<a>").attr("href", canvas.toDataURL('image/png'))
             .attr("download", imageFileName)
             .appendTo("body");
             a[0].click();
-            a.remove();
+            a.remove();*/
 
 		}
 	});
