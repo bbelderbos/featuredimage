@@ -31,7 +31,8 @@ $css = <<<EOD
   width: {$featImgWidth}px; 
   height: {$featImgHeight}px;
   opacity: {$images["overlay"]["opacity"]};
-  background: url({$images["overlay"]["url"]}) {$images["overlay"]["position"]} no-repeat;  
+  background: url({$images["overlay"]["url"]}) {$images["overlay"]["position"]};
+  background-repeat: {$images["overlay"]["repeat"]};
   background-size: {$images["overlay"]["size"]};
 }
 h1#blogtitle {

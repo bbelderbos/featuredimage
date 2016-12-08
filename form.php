@@ -28,10 +28,9 @@
     }
     ?>
     </select>
-    <label class="newsection">Local material design wallpapers (type a color)</label>
+    <label class="newsection">Type a color to select bg (or paste image URL)</label>
     <input class="newsection" type="text" id="bg1_url" name="bg1_url" value="<?php echo $images["bg1"]["url"]; ?>">
-    <label>  - Scale / Position <a id="more" href="#">more ...</a>
-		<span class="spinner"><img src="i/mini-loader.gif"></span>
+    <span class="spinner"><img src="i/mini-loader.gif"></span>
     </label>
     <select id="bg1_pos" name="bg1_pos">
     <?php
@@ -52,29 +51,7 @@
     ?>
     </select>
 	
-    <div id="moreFields">
-		<label class="newsection">Remote bg image (paste URL)</label>
-		<input class="newsection" type="text" id="bg2_url" name="bg2_url" value="<?php echo $images["bg2"]["url"]; ?>">
-		<label>  - Scale / Position</label>
-		<select id="bg2_pos" name="bg2_pos">
-		<?php
-		foreach($positions as $v){
-		echo "<option value='$v' ";
-		if($v == $images["bg2"]["position"]) echo " selected='selected'";
-		echo ">$v</option>";
-		}
-		?>
-		</select>
-		<select id="bg2_size" name="bg2_size">
-		<?php
-		foreach($sizes as $v){
-		echo "<option value='$v' ";
-		if($v == $images["bg2"]["size"]) echo " selected='selected'";
-		echo ">$v</option>";
-		}
-		?>
-		</select>
-		<label class="newsection">Other overlay image (paste URL)</label>
+		<label class="newsection">Second overlay image (paste URL)</label>
 		<input class="newsection" type="text" id="overlay_url" name="overlay_url" value="<?php echo $images["overlay"]["url"]; ?>">
 		<label>  - Scale / Position</label>
 		<select id="overlay_pos" name="overlay_pos">
@@ -95,7 +72,16 @@
 		}
 		?>
 		</select>
-		<label>  - Opacity of overlay</label>
+		<label>  - Bg repeat / opacity</label>
+		<select id="overlay_repeat" name="overlay_repeat">
+		<?php
+		foreach($repeatOptions as $v){
+		echo "<option value='$v' ";
+		if($v == $images["overlay"]["repeat"]) echo " selected='selected'";
+		echo ">$v</option>";
+		}
+		?>
+		</select>
 		<select id="overlay_opacity" name="overlay_opacity">
 		<?php
 		foreach($opacities as $v){
@@ -105,6 +91,5 @@
 		}
 		?>
 		</select>
-	 </div>
   </form>
 </div>

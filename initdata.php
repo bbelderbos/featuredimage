@@ -24,6 +24,9 @@ $positions = array(
 $sizes = array(
   "10%", "25%", "40%", "50%", "75%", "100%", "125%", "150%", "200%", "300%", "400%", "500%", "1000%",
 );
+$repeatOptions = array(
+  "no-repeat", "repeat", "repeat-x", "repeat-y",
+);
 $opacities = array(
   "0.1", "0.2", "0.3", "0.4", "0.5", "0.6", "0.7", "0.8", "0.9", "1",
 );
@@ -45,6 +48,7 @@ $topmarginsTitle = array(
 
 $defaultPos = "center center";
 $defaultSize = "100%";
+$defaultRepeat = "no-repeat";
 $defaultOpacity = "0.5";
 
 $images = array(
@@ -53,15 +57,11 @@ $images = array(
     "position" => $defaultPos,
     "size" => $defaultSize,
   ),
-  "bg2" => array(
-    "url" => "", 
-    "position" => $defaultPos,
-    "size" => $defaultSize,
-  ),
   "overlay" => array(
     "url" => "", 
     "position" => $defaultPos,
     "size" => $defaultSize,
+    "repeat" => $defaultRepeat,
     "opacity" => $defaultOpacity,
   ),
 );

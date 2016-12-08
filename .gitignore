@@ -1,3 +1,5 @@
 experiment/*
 *swp
 user_images.txt
+images/*
+!images/index.html

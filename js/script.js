@@ -15,14 +15,6 @@ function googleplusbtn(url) {
 
 (function($){
 
-  $('#moreFields').hide();
-
-  $('#more').click(function(){
-	var $this = $(this);
-  	$this.text($this.text() == "more ..." ? "less ..." : "more ...");
-    $("#moreFields").slideToggle(); 
-  });
-
   // autocomplete progress spinner hides on loading page
   $('.spinner').hide();
   $.unblockUI();
@@ -77,16 +69,13 @@ function googleplusbtn(url) {
     $('h1#blogtitle').css({"top": topoffset });
 
     var bg1_url = $("#bg1_url").val();
-    var bg2_url = $("#bg2_url").val();
-    $('#featImg').css({"background-image": "url("+bg1_url+"), url("+bg2_url+")" });
+    $('#featImg').css({"background-image": "url("+bg1_url+")" });
 
     var bg1_pos = $("#bg1_pos option:selected").val();
-    var bg2_pos = $("#bg2_pos option:selected").val();
-    $('#featImg').css({"background-position": bg1_pos+", "+bg2_pos });
+    $('#featImg').css({"background-position": bg1_pos });
 
     var bg1_size = $("#bg1_size option:selected").val();
-    var bg2_size = $("#bg2_size option:selected").val();
-    $('#featImg').css({"background-size": bg1_size+", "+bg2_size });
+    $('#featImg').css({"background-size": bg1_size });
 
     var overlay_url = $("#overlay_url").val();
     $('#overlay').css({"background": "url("+overlay_url+")" });
@@ -96,6 +85,9 @@ function googleplusbtn(url) {
 
     var overlay_size = $("#overlay_size option:selected").val();
     $('#overlay').css({"background-size": overlay_size });
+
+    var overlay_repeat = $("#overlay_repeat option:selected").val();
+    $('#overlay').css({"background-repeat": overlay_repeat });
 
     var overlay_opacity = $("#overlay_opacity option:selected").val();
     $('#overlay').css({"opacity": overlay_opacity });
@@ -123,13 +115,13 @@ function googleplusbtn(url) {
       $('.spinner').hide();
     }, 
     select: function(event, ui) { 
-      $(this).val(ui.item.value);
-      $('#featImg').css({"background-image": "url("+ui.item.value+")" });
+      $(this).val(ui.item.full);
+      $('#featImg').css({"background-image": "url("+ui.item.full+")" });
     }
   }).data( "autocomplete" )._renderItem = function( ul, item ) {
     var imghtml = '';
-    imghtml += "<a id="+item.id+">"; 
-      imghtml += "<img style='width: 50px; height: 50px;' src='"+item.value+"'>"; 
+    imghtml += "<a id="+item.full+">"; 
+      imghtml += "<img style='width: 50px; height: 50px;' src='"+item.thumb+"'>"; 
     imghtml += "</a>";
     return $( "<li></li>" )
       .data( "item.autocomplete", item )
