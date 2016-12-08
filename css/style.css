@@ -115,7 +115,7 @@ h1#blogtitle {
 }
 #formWrapper {
   float: left; 
-  margin: 15px;
+  margin: 40px 20px;
 }
 form#addImage {
   margin-top: 20px;

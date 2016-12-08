@@ -106,12 +106,6 @@ function googleplusbtn(url) {
   });
 
 
-  // lock page upon submit
-  $('form').submit(function(){
-    $.blockUI({ message: '<h1><img src="i/loader.gif" /> Updating image ...</h1>' });
-  });
-
-
   // fields with color picker
   $('#bgcolor, #titlecolor').spectrum({
     showInitial: true,
@@ -145,7 +139,13 @@ function googleplusbtn(url) {
 
 
   $("#bookmark").click(function() {
+      alert("You will be redirected to a unique URL to bookmark (TODO: make it a short URL)"); // TODO
       $("#addImage").submit(); 
+  });
+
+  $("#reset").click(function() {
+	  window.location.href = "/";
+	  return false;
   });
 
   $("#btnSave").click(function() { 
@@ -161,28 +161,28 @@ function googleplusbtn(url) {
 		// useCORS: true,
 
 		onrendered: function(canvas) {
+			//document.body.appendChild(canvas);
 
-			/*var img = new Image;
-			img.src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/pie.png";
-			img.crossOrigin = "Anonymous";
-			img.src =canvas.toDataURL();
-						alert(img.src);
-			*/
+			try {
+				// save to file, this method does not let you specify filename:
+				// Canvas2Image.saveAsPNG(canvas); 
+				// so using easy workaround
+				// canvas.toDataURL can crash on external images ("tainted canvas"), even with above allowTaint: true
+				// in that case show the generated canvas below for user to manually download
+				var a = $("<a>").attr("href", canvas.toDataURL('image/png'))
+				.attr("download", imageFileName)
+				.appendTo("body");
+				a[0].click();
+				a.remove();
+			}
+			catch(err) {
+				// Convert and download as image 
+				$("#img-out").html(canvas);
+				$("#feedback").html("Could not automatically download image, right-click on below image to save");
+			}
 
-			document.body.appendChild(canvas);
 
-			// Convert and download as image 
-			$("#img-out").html(canvas);
 			$.unblockUI();
-
-			//Canvas2Image.saveAsPNG(canvas); 
-
-			var a = $("<a>").attr("href", canvas.toDataURL('image/png'))
-            .attr("download", imageFileName)
-            .appendTo("body");
-            a[0].click();
-            a.remove();
-
 		}
 	});
 

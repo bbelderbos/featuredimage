@@ -9,4 +9,7 @@ if(isset($_POST['submitDimensions'])){
   $_SESSION['height'] = isset($_SESSION['height'])? $_SESSION['height'] : $defaultHeight;
 }
 $fontScaling = (float)(1 + ( ($_SESSION['height'] - $defaultHeight) / $defaultHeight )); 
+if($_SESSION['width'] > 100 && $fontScaling < 1){
+  $fontScaling = 1;
+}
 ?>
