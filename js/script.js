@@ -66,9 +66,6 @@ function googleplusbtn(url) {
       fontFam = fonts[fontCss];
       fontFam = fontFam.replace("font-family: ", "").replace(";", "");
       googleFontUrl = "http://fonts.googleapis.com/css?family="+fontCss;
-      console.log(fontCss);
-      console.log(fontFam);
-      console.log(googleFontUrl);
 
       $('h1#blogtitle').css({"font-family": fontFam });
       //$('h1#blogtitle').css({"font-family": '"'+fontFam+'"' });
@@ -103,12 +100,7 @@ function googleplusbtn(url) {
     var overlay_opacity = $("#overlay_opacity option:selected").val();
     $('#overlay').css({"opacity": overlay_opacity });
 
-    var storeLink = $('#storeLink').is(':checked');
     var fbid = $("#fbid").val();
-
-    if(storeLink == true){
-      $("#addImage").submit(); 
-    }
 
     return false;
   });
@@ -126,6 +118,35 @@ function googleplusbtn(url) {
     showInput: true,
   });
 
+  $( "#bg1_url" ).autocomplete({
+    dataType: "json",
+    source: "files.php", 
+    minLength: 2,
+    search: function(event, ui) { 
+      $('.spinner').show();
+    },
+    open: function(event, ui) {
+      $('.spinner').hide();
+    }, 
+    select: function(event, ui) { 
+      $(this).val(ui.item.value);
+      $('#featImg').css({"background-image": "url("+ui.item.value+")" });
+    }
+  }).data( "autocomplete" )._renderItem = function( ul, item ) {
+    var imghtml = '';
+    imghtml += "<a id="+item.id+">"; 
+      imghtml += "<img style='width: 50px; height: 50px;' src='"+item.value+"'>"; 
+    imghtml += "</a>";
+    return $( "<li></li>" )
+      .data( "item.autocomplete", item )
+      .append(imghtml)
+      .appendTo(ul);
+  };
+
+
+  $("#bookmark").click(function() {
+      $("#addImage").submit(); 
+  });
 
   $("#btnSave").click(function() { 
     $.blockUI({ message: '<h1><img src="i/loader.gif" />Generating image ...</h1>' });
@@ -137,9 +158,7 @@ function googleplusbtn(url) {
 
 		"logging": true, //Enable log (use Web Console for get Errors and Warnings)
 		allowTaint: true,
-
 		// useCORS: true,
-		// "proxy":"html2canvasproxy.php", // allowTaint works better
 
 		onrendered: function(canvas) {
 
@@ -154,10 +173,11 @@ function googleplusbtn(url) {
 
 			// Convert and download as image 
 			$("#img-out").html(canvas);
-
 			$.unblockUI();
 
-			//Canvas2Image.saveAsPNG(canvas); 
+			//var getCanvas = canvas;
+			//var imgageData = getCanvas.toDataURL("image/png");
+			Canvas2Image.saveAsPNG(canvas); 
 
 			/*var a = $("<a>").attr("href", canvas.toDataURL('image/png'))
             .attr("download", imageFileName)

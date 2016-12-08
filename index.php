@@ -18,6 +18,7 @@ include 'dimension_form.php';
         </div>
       </div>
 	  <input class="btn" type="submit" id="btnSave" value="Save image"/>
+	  <input class="btn" type="submit" id="bookmark" value="Bookmark image"/>
       <div id="img-out"></div>
     </div> 
   </div>

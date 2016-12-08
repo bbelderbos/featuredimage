@@ -270,3 +270,7 @@ body:after{
 	clear: both;
 	margin-left: 10px;
 }
+
+/* overwrite auto-complete */
+.ui-menu .ui-menu-item { margin: 0; padding: 0; zoom: 1; margin: 5px; width: 50px; }
+
