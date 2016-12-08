@@ -107,7 +107,7 @@ function googleplusbtn(url) {
   $( "#bg1_url" ).autocomplete({
     dataType: "json",
     source: "files.php", 
-    minLength: 2,
+    minLength: 0,
     search: function(event, ui) { 
       $('.spinner').show();
     },
@@ -115,13 +115,16 @@ function googleplusbtn(url) {
       $('.spinner').hide();
     }, 
     select: function(event, ui) { 
+      event.preventDefault();
       $(this).val(ui.item.full);
       $('#featImg').css({"background-image": "url("+ui.item.full+")" });
     }
+  }).focus(function() { // show all upon focus of ac field
+    $(this).autocomplete('search', $(this).val())
   }).data( "autocomplete" )._renderItem = function( ul, item ) {
     var imghtml = '';
     imghtml += "<a id="+item.full+">"; 
-      imghtml += "<img style='width: 50px; height: 50px;' src='"+item.thumb+"'>"; 
+      imghtml += "<img src='"+item.thumb+"'>"; 
     imghtml += "</a>";
     return $( "<li></li>" )
       .data( "item.autocomplete", item )
@@ -170,9 +173,8 @@ function googleplusbtn(url) {
 			catch(err) {
 				// Convert and download as image 
 				$("#img-out").html(canvas);
-				$("#feedback").html("<br><b>Exception:</b> could not automatically download image, right-click on below image to save");
+				$("#feedback").html("Image with external links ('tainted'), could not automatically download, click+save copy below");
 			}
-
 
 			$.unblockUI();
 		}

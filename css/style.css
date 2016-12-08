@@ -275,6 +275,7 @@ body:after{
 
 /* overwrite auto-complete */
 .ui-menu .ui-menu-item { margin: 0; padding: 0; zoom: 1; margin: 5px; width: 50px; }
+.ui-autocomplete { width: 600px; }
 
 #overlay {
 	background-repeat: no-repeat;
