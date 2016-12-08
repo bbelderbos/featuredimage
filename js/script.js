@@ -144,7 +144,7 @@ function googleplusbtn(url) {
   });
 
   $("#reset").click(function() {
-	  window.location.href = "/";
+	  window.location.href = "/featured_image/";
 	  return false;
   });
 
