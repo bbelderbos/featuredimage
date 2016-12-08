@@ -178,7 +178,7 @@ function googleplusbtn(url) {
 			catch(err) {
 				// Convert and download as image 
 				$("#img-out").html(canvas);
-				$("#feedback").html("Could not automatically download image, right-click on below image to save");
+				$("#feedback").html("<br><b>Exception:</b> could not automatically download image, right-click on below image to save");
 			}
 
 
