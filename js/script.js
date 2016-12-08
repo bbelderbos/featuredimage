@@ -175,15 +175,13 @@ function googleplusbtn(url) {
 			$("#img-out").html(canvas);
 			$.unblockUI();
 
-			//var getCanvas = canvas;
-			//var imgageData = getCanvas.toDataURL("image/png");
-			Canvas2Image.saveAsPNG(canvas); 
+			//Canvas2Image.saveAsPNG(canvas); 
 
-			/*var a = $("<a>").attr("href", canvas.toDataURL('image/png'))
+			var a = $("<a>").attr("href", canvas.toDataURL('image/png'))
             .attr("download", imageFileName)
             .appendTo("body");
             a[0].click();
-            a.remove();*/
+            a.remove();
 
 		}
 	});

@@ -2,6 +2,7 @@
 include 'session.php';
 include 'functions.php'; 
 include 'googlefonts.php';
+include 'formsubmit.php';
 include 'initdata.php'; 
 include 'header.php';
 include 'dimension_form.php';
