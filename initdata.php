@@ -34,9 +34,9 @@ $border = "#ccc";
 $title = array( 
   "text" => "Title of image",
   "titlecolor" => "#000000", 
-  "size" => "14",
+  "size" => "16",
   "font" => "Ubuntu", 
-  "topoffset" => "20px",
+  "topoffset" => "60px",
 );
 
 # $fonts array is set/read from googlefonts.txt (.php)
@@ -47,7 +47,6 @@ $topmarginsTitle = array(
 );
 
 $defaultPos = "center center";
-$defaultSize = "100";
 $defaultRepeat = "no-repeat";
 $defaultOpacity = "0.3";
 
@@ -55,12 +54,12 @@ $images = array(
   "bg1" => array(
     "url" => "", 
     "position" => $defaultPos,
-    "size" => $defaultSize,
+    "size" => 200,
   ),
   "overlay" => array(
     "url" => "", 
     "position" => $defaultPos,
-    "size" => $defaultSize,
+    "size" => 100,
     "repeat" => $defaultRepeat,
     "opacity" => $defaultOpacity,
   ),
