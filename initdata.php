@@ -19,10 +19,11 @@ $wrapper_dimensions = array(
 
 // form values
 $positions = array(
-  "left top", "left center", "left bottom", "right top", "right center", "right bottom", "center top", "center center", "center bottom", "10% 10%", "25% 25%", "25% 50%", "25% 75%", "50% 25%", "50% 50%", "50% 75%", "75% 25%", "75% 50%", "75% 75%", "10% 10%", "25% 25%", "40% 40%", "50% 50%", "60% 60%", "75% 75%", "90% 90%",
+  "left top", "left center", "left bottom", "right top", "right center", 
+  "right bottom", "center top", "center center", "center bottom", 
 );
 $sizes = array(
-  "10%", "25%", "40%", "50%", "75%", "100%", "125%", "150%", "200%", "300%", "400%", "500%", "1000%",
+  "10", "25", "40", "50", "75", "100", "125", "150", "200", "300", "400", "500", "1000",
 );
 $repeatOptions = array(
   "no-repeat", "repeat", "repeat-x", "repeat-y",
@@ -42,14 +43,14 @@ $title = array(
 # $fonts array is set/read from googlefonts.txt (.php)
 
 $topmarginsTitle = array(
-  "0px", "10px", "20px", "30px", "40px", "50px", "60px", "70px", "80px", "90px", "100px", "110px", "120px", "130px", "140px",
-
+  "0px", "10px", "20px", "30px", "40px", "50px", "60px", "70px", "80px", "90px", "100px", 
+  "110px", "120px", "130px", "140px", "150px", "175px", "200px", "250px", "300px",
 );
 
 $defaultPos = "center center";
-$defaultSize = "100%";
+$defaultSize = "100";
 $defaultRepeat = "no-repeat";
-$defaultOpacity = "0.5";
+$defaultOpacity = "0.3";
 
 $images = array(
   "bg1" => array(

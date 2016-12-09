@@ -1,8 +1,6 @@
 <?php
-$logfile = "user_images.txt";
-$storedUrls = array();
-
 if(isset($_GET['bg1_url'])){
+    #print_r($_GET); exit;
 	$bgcolor = $_GET['bgcolor'];
 	$title["text"] = $_GET['title'];
 	$title["font"] = $_GET['font'];
@@ -14,24 +12,7 @@ if(isset($_GET['bg1_url'])){
 	$images["overlay"]["url"] = $_GET["overlay_url"];
     $images["overlay"]["position"] = $_GET["overlay_pos"];
     $images["overlay"]["size"] = $_GET["overlay_size"];
-    $images["overlay"]["repeat"] = $_GET["repeat"];
+    $images["overlay"]["repeat"] = $_GET["overlay_repeat"];
     $images["overlay"]["opacity"] = $_GET["overlay_opacity"];
-
-	if(is_file($logfile)){
-		$file = fopen($logfile, "r") or exit("Unable to open file!");
-		while(!feof($file)) {
-			$url = fgets($file);
-			array_push($storedUrls, $url);
-		}
-		fclose($file);
-	}
-
-    $actual_link = $_SERVER["REQUEST_URI"];
-    $actual_link = str_replace("&storeLink=1", "", $actual_link); # kick this var out
-    if(!in_array($actual_link, $storedUrls)){
-        $fh = fopen($logfile, 'a') or die("can't open file");
-        fwrite($fh, $actual_link."\n");
-        fclose($fh);
-    }
 }
 ?>

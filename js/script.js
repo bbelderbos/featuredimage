@@ -82,7 +82,7 @@ function googleplusbtn(url) {
     $('#featImg').css({"background-position": bg1_pos });
 
     var bg1_size = $("#bg1_size option:selected").val();
-    $('#featImg').css({"background-size": bg1_size });
+    $('#featImg').css({"background-size": bg1_size+"%" });
 
     var overlay_url = $("#overlay_url").val();
     $('#overlay').css({"background": "url("+overlay_url+")" });
@@ -91,7 +91,7 @@ function googleplusbtn(url) {
     $('#overlay').css({"background-position": overlay_pos });
 
     var overlay_size = $("#overlay_size option:selected").val();
-    $('#overlay').css({"background-size": overlay_size });
+    $('#overlay').css({"background-size": overlay_size+"%" });
 
     var overlay_repeat = $("#overlay_repeat option:selected").val();
     $('#overlay').css({"background-repeat": overlay_repeat });

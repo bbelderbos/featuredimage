@@ -2,7 +2,7 @@
 
   <form id="addImage" name="addImage" method="get">
     <label>Canvas background / Title color</label>
-    <div id="colorHandles" style="position: relative; left: 12px; padding: 5px 0;">
+    <div id="colorHandles">
       <input type="color" class="smallInput" id="bgcolor" name="bgcolor" value="<?php echo $bgcolor; ?>">
       <input type="color" class="smallInput" id="titlecolor" name="titlecolor" value="<?php echo $title["titlecolor"]; ?>">
     </div>
@@ -46,7 +46,7 @@
     foreach($sizes as $v){
       echo "<option value='$v' ";
       if($v == $images["bg1"]["size"]) echo " selected='selected'";
-      echo ">$v</option>";
+      echo ">$v%</option>";
     }
     ?>
     </select>
@@ -68,7 +68,7 @@
 		foreach($sizes as $v){
 		echo "<option value='$v' ";
 		if($v == $images["overlay"]["size"]) echo " selected='selected'";
-		echo ">$v</option>";
+		echo ">$v%</option>";
 		}
 		?>
 		</select>

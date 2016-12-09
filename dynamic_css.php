@@ -20,9 +20,9 @@ $css = <<<EOD
   width: {$featImgWidth}px; 
   height: {$featImgHeight}px;
   border: 1px solid $border;
-  background-image: url({$images["bg1"]["url"]}), url({$images["bg2"]["url"]});
-  background-position: {$images["bg1"]["position"]}, {$images["bg2"]["position"]};
-  background-size: {$images["bg1"]["size"]}, {$images["bg2"]["size"]};
+  background-image: url({$images["bg1"]["url"]});
+  background-position: {$images["bg1"]["position"]};
+  background-size: {$images["bg1"]["size"]}%;
 }
 #featImg, img, #overlay {
   border-radius: $radius; -webkit-border-radius: $radius; -moz-border-radius: $radius;
@@ -33,7 +33,7 @@ $css = <<<EOD
   opacity: {$images["overlay"]["opacity"]};
   background: url({$images["overlay"]["url"]}) {$images["overlay"]["position"]};
   background-repeat: {$images["overlay"]["repeat"]};
-  background-size: {$images["overlay"]["size"]};
+  background-size: {$images["overlay"]["size"]}%;
 }
 h1#blogtitle {
   color: {$title["titlecolor"]};

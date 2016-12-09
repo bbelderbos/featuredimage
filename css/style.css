@@ -65,11 +65,14 @@ li {
 #innerWrapper {
   margin: 20px auto;
   position: relative;
+  background-color: #fff;
+  background-color: rgba(255,255,255,1);
 }
 #outerWrapper {
   float: left;
   overflow: hidden;
   margin-bottom: 15px;
+  background-color: rgba(255,255,255,0.5);
 }
 ul#prevImg {
   width: 230px;
@@ -284,3 +287,8 @@ body:after{
 	background-repeat: no-repeat;
 }
 
+#colorHandles {
+    position: relative; 
+    left: 12px; 
+    padding: 5px 0;
+}
