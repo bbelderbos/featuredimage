@@ -12,7 +12,7 @@ if ($handle = opendir($basedir)) {
 			$item = array();
 			$item['thumb'] = $basedir . "/" . $thumb;
 			$item['full'] = $basedir . "/" . $full;
-			if( $term === '' || (strpos($entry, "_full") !== false) || (strpos($entry, $term) !== false)){
+			if( $term === '' || (strpos($term, $images) !== false) || (strpos($entry, $term) !== false)){
 		        array_push($arr, $item);
 			}
         }
