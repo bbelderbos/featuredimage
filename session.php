@@ -1,6 +1,6 @@
 <?php
 session_start();
-$defaultWidth = $defaultHeight = 200;
+$defaultWidth = $defaultHeight = 300;
 if(isset($_POST['submitDimensions'])){
   $_SESSION['width'] = $_POST['width'];
   $_SESSION['height'] = $_POST['height'];

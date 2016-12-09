@@ -8,7 +8,6 @@ $currentUrl = get_current_url();
 $startOverUrl = $baseurl . "/$subdir/";
 $bgcolor = "#FFFFFF"; 
 $dimensions = array(
-  # rfe - scale, but for now I want to use it for blog featured images which are 200x200
   "width" => $_SESSION['width'], 
   "height" => $_SESSION['height'],
 );

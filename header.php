@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/spectrum.css" />
   <link rel="stylesheet" href="css/style.css" type="text/css" />
 
-  <meta property="og:description" content="Start to build your collection of blog images. This pure CSS/JS solution takes my Instagram feed and let you combine images into beautiful 200x200 thumbnails, ideally suited for blog featured images" />
+  <meta property="og:description" content="Start to build your collection of blog images. This pure CSS/JS solution takes my Instagram feed and let you combine images into beautiful thumbnails, ideally suited for blog featured images" />
   <meta property="og:url" content="<?php echo $appUrl; ?>" />
   <meta property="og:title" content="<?php echo $siteName; ?>" />
   <meta property="og:type" content="website" />
