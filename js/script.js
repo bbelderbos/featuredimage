@@ -15,6 +15,13 @@ function googleplusbtn(url) {
 
 (function($){
 
+  // use diff bg images
+  var cover_url = $("#coverImg").text();
+  $('body').css({"background-image": "url("+cover_url+")" });
+
+  // autofocus fields upon select
+  $("input:text").focus(function() { $(this).select(); } );
+
   // autocomplete progress spinner hides on loading page
   $('.spinner').hide();
   $.unblockUI();
@@ -141,6 +148,13 @@ function googleplusbtn(url) {
   $("#reset").click(function() {
 	  window.location.href = "/featured_image/";
 	  return false;
+  });
+
+  $("#setDimensions").submit(function(event){
+	var r = confirm("This will reset the canvas, you sure you want to continue?")
+	if (r !== true) {
+	  return false;
+	} 
   });
 
   $("#btnSave").click(function() { 

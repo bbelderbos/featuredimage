@@ -243,7 +243,10 @@ a#saveImage {
 /* http://stackoverflow.com/questions/25153723/cover-background-image-with-transparent-background-color-full-screen */
 body{
     position:relative;
-    background: url(../i/wallpaper.png) no-repeat center center fixed;
+    background-image: url(../i/wallpaper.png); /* default, gets dynamically changed by set_bg.php and script.js */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
