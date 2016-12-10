@@ -6,6 +6,8 @@ import os
 import re
 import sys
 from PIL import Image
+
+from color_detection import ColorDetection
  
 IMAGES = "images"
 THUMB = "_thumb"
@@ -42,12 +44,10 @@ class Portfolio:
     else:
       height = int((float(img.size[1]) * float(widthPercent)))
     img = img.resize((width, height), Image.BILINEAR)
-    if "." in image:
-      name, ext = os.path.splitext(image)
-    else:
-      name, ext = image, ""
-    
-    outFile = name + (THUMB if thumb else FULL) + ext
+    ext = os.path.splitext(image)[1] if "." else ""
+    name = ColorDetection(image).get_image_colors_str()
+    name += (THUMB if thumb else FULL) + ext
+    outFile = os.path.join(os.path.dirname(image), name)
     img.save(outFile)
     return outFile
 
@@ -59,9 +59,6 @@ if __name__ == "__main__":
   fullWidth = sys.argv[3]
   p = Portfolio(dirname)
   for im in p.imageQueue:
-    try:
-      thumbImg = p.resize_image(im, thumbWidth, thumb=True)
-      zoomImg = p.resize_image(im, fullWidth, thumb=False)
-      print("OK: thumb img: %s, zoom img: %s" % (thumbImg, zoomImg))
-    except Exception as exc:
-      print("ERR: processing %s, exception: %s" % (im, exc))
+    thumbImg = p.resize_image(im, thumbWidth, thumb=True)
+    zoomImg = p.resize_image(im, fullWidth, thumb=False)
+    print("OK: thumb img: %s, zoom img: %s" % (thumbImg, zoomImg))
