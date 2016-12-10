@@ -39,7 +39,7 @@ $title = array(
   "topoffset" => "60px",
 );
 
-# $fonts array is set/read from googlefonts.txt (.php)
+include 'googlefonts.php';
 
 $topmarginsTitle = array(
   "0px", "10px", "20px", "30px", "40px", "50px", "60px", "70px", "80px", "90px", "100px", 
