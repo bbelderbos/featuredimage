@@ -141,7 +141,6 @@ function googleplusbtn(url) {
 
 
   $("#bookmark").click(function() {
-      alert("You will be redirected to a unique URL to bookmark (TODO: make it a short URL)"); // TODO
       $("#addImage").submit(); 
   });
 
