@@ -5,16 +5,11 @@ from PIL import Image
 import webcolors
 
 AMOUNT_COLORS = 1024*1024
-COLOR_MAPPING = {
-    "maroon": "red",
-    "aqua": "blue",
-    "teal": "green",
-    'olive': 'brown',
-}
-NUM_COLORS = 15
+NUM_COLORS = 3
+COUNT_LIMIT = 101
 
 class ColorDetection:
-    _ids = count(1)
+    _ids = count(1, step=0.5)
 
     def __init__(self, img_file):
         self.img = Image.open(img_file)
@@ -22,9 +17,8 @@ class ColorDetection:
 
     def get_image_colors_str(self):
         rgbs = self._get_main_colors()
-        colors = set([self._closest_colour(r[1]) for r in rgbs])
-        added_colors = set([COLOR_MAPPING[co] for co in colors if co in COLOR_MAPPING])
-        return "_".join([str(self.id).zfill(2)] + list(colors.union(added_colors)))
+        colors = list(set([self._closest_colour(r[1]) for r in rgbs]))
+        return "_".join([str(int(self.id))] + colors)
 
     def _get_main_colors(self, most_common=NUM_COLORS):
         colors = self.img.getcolors(AMOUNT_COLORS) 

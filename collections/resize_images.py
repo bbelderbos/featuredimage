@@ -9,7 +9,7 @@ from PIL import Image
 
 from color_detection import ColorDetection
  
-IMAGES = "images"
+IMAGES = "../images"
 THUMB = "_thumb"
 FULL = "_full"
 
