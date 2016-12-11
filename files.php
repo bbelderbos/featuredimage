@@ -1,5 +1,5 @@
 <?php
-$theme = isset($_GET['theme']) ? $_GET['theme'] : 'material-design';
+$theme = isset($_GET['theme']) ? $_GET['theme'] : 'material';
 $images = "images";
 $basedir = "$images/$theme";
 $term = isset($_GET['term']) ? $_GET['term'] : '';

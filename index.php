@@ -17,6 +17,7 @@ if(isset($_GET['bg1_url'])){
     $images["overlay"]["size"] = $_GET["overlay_size"];
     $images["overlay"]["repeat"] = $_GET["overlay_repeat"];
     $images["overlay"]["opacity"] = $_GET["overlay_opacity"];
+	$active_coll = $_GET["collection"];
 }
 
 include 'header.php';

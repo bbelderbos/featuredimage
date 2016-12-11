@@ -292,3 +292,9 @@ body:after{
     left: 12px; 
     padding: 5px 0;
 }
+
+select#collection {
+    width: 170px;
+    height: 25px;
+    margin-top: -6px;
+}

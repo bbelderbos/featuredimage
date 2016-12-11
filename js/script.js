@@ -1,22 +1,39 @@
-function input_is_url(str){
-  if(str.indexOf('http://') == 0) { 
-    return true; 
-  } else {
-    return false; 
-  }
+function theme_autocomplete(){
+  $( "#bg1_url" ).autocomplete({
+    dataType: "json",
+    source: "files.php?theme=" + $("#collection option:selected").val(),
+    minLength: 0,
+    search: function(event, ui) { 
+      $('.spinner').show();
+    },
+    open: function(event, ui) {
+      $('.spinner').hide();
+    }, 
+    select: function(event, ui) { 
+      event.preventDefault();
+      $(this).val(ui.item.full);
+      $('#featImg').css({"background-image": "url("+ui.item.full+")" });
+    }
+  }).focus(function() { // show all upon focus of ac field
+    $(this).autocomplete('search', $(this).val())
+  }).data( "autocomplete" )._renderItem = function( ul, item ) {
+    var imghtml = '';
+    imghtml += "<a id="+item.full+">"; 
+      imghtml += "<img src='"+item.thumb+"'>"; 
+    imghtml += "</a>";
+    return $( "<li></li>" )
+      .data( "item.autocomplete", item )
+      .append(imghtml)
+      .appendTo(ul);
+  };
 }
 
-function googleplusbtn(url) {
-  sharelink = "https://plus.google.com/share?url="+url;
-  newwindow=window.open(sharelink,'name','height=400,width=600');
-  if (window.focus) {newwindow.focus()}
-  return false;
-}
 
 (function($){
 
   // use diff bg images
   var cover_url = $("#coverImg").text();
+
   $('body').css({"background-image": "url("+cover_url+")" });
 
   // autofocus fields upon select
@@ -35,9 +52,9 @@ function googleplusbtn(url) {
     this.setSelectionRange(0, 9999); 
   });
   
-
   // update canvas on any field change
   $("form#addImage *").live('change', function() {
+
     // reset spinner 
     $('.spinner').hide();
 
@@ -98,9 +115,7 @@ function googleplusbtn(url) {
 
     var overlay_opacity = $("#overlay_opacity option:selected").val();
     $('#overlay').css({"opacity": overlay_opacity });
-
-    var fbid = $("#fbid").val();
-
+  
     return false;
   });
 
@@ -111,33 +126,11 @@ function googleplusbtn(url) {
     showInput: true,
   });
 
-  $( "#bg1_url" ).autocomplete({
-    dataType: "json",
-    source: "files.php", 
-    minLength: 0,
-    search: function(event, ui) { 
-      $('.spinner').show();
-    },
-    open: function(event, ui) {
-      $('.spinner').hide();
-    }, 
-    select: function(event, ui) { 
-      event.preventDefault();
-      $(this).val(ui.item.full);
-      $('#featImg').css({"background-image": "url("+ui.item.full+")" });
-    }
-  }).focus(function() { // show all upon focus of ac field
-    $(this).autocomplete('search', $(this).val())
-  }).data( "autocomplete" )._renderItem = function( ul, item ) {
-    var imghtml = '';
-    imghtml += "<a id="+item.full+">"; 
-      imghtml += "<img src='"+item.thumb+"'>"; 
-    imghtml += "</a>";
-    return $( "<li></li>" )
-      .data( "item.autocomplete", item )
-      .append(imghtml)
-      .appendTo(ul);
-  };
+  // not most elegant, but need the auto-complete dynamically pick collection type
+  theme_autocomplete();
+  $('#collection').on('change', function(e) {
+    theme_autocomplete();
+  });
 
 
   $("#bookmark").click(function() {

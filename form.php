@@ -28,7 +28,17 @@
     }
     ?>
     </select>
-    <label class="newsection">Type a color to select bg (or paste image URL)</label>
+    <label class="newsection">
+		<select id="collection" name="collection">
+		<?php
+		foreach($collections as $c){
+		echo "<option value='$c' ";
+		if($c == $active_coll) echo " selected='selected'"; 
+		echo ">BG theme: $c</option>";
+		}
+		?>
+		</select>
+	</label>
     <input class="newsection" type="text" id="bg1_url" name="bg1_url" value="<?php echo $images["bg1"]["url"]; ?>">
     <span class="spinner"><img src="i/mini-loader.gif"></span>
     </label>

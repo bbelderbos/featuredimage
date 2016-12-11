@@ -64,4 +64,11 @@ $images = array(
     "opacity" => $defaultOpacity,
   ),
 );
+
+$collections = array();
+$dirs = array_filter(glob('images/*'), 'is_dir');
+foreach($dirs as $d){
+  array_push($collections, basename($d));
+}
+$active_coll = "material";
 ?>
