@@ -58,21 +58,26 @@ li {
   padding: 0 4px;
 }
 #results {
-  width: 550px;
   margin: 60px 0 0 0;
   float: left;
+}
+#downloadImg {
+  margin: 0 20px;
+  padding: 20px;
+  float: left;
+  border: 1px solid #ddd;
+  background-color: #fff;
 }
 #innerWrapper {
   margin: 20px auto;
   position: relative;
   background-color: #fff;
-  background-color: rgba(255,255,255,1);
 }
 #outerWrapper {
   float: left;
   overflow: hidden;
   margin-bottom: 15px;
-  background-color: rgba(255,255,255,0.5);
+  background-color: #fff;
 }
 ul#prevImg {
   width: 230px;

@@ -179,8 +179,14 @@ function theme_autocomplete(){
 			}
 			catch(err) {
 				// Convert and download as image 
+				$("#results").append("<div id='downloadImg'>" + 
+					"<div id='img-out'></div>" + 
+					"<div id='feedback'></div>" + 
+					"</div>");
 				$("#img-out").html(canvas);
-				$("#feedback").html("Image with external links ('tainted'), could not automatically download, click+save copy below");
+				$("#feedback").html("<strong>Tainted image (contains external images)," +
+					"<br>could not automatically download, " + 
+					"<br>manually save above copy.</strong>");
 			}
 
 			$.unblockUI();

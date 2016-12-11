@@ -43,8 +43,6 @@ include 'header.php';
 	<input class="btn" type="submit" id="btnSave" value="Save image"/>
 	<input class="btn" type="submit" id="bookmark" value="Bookmark image"/>
 	<input class="btn" type="submit" id="reset" value="Start fresh"/>
-    <div id="img-out"></div>
-    <div id="feedback"></div>
   </div> 
 </div>
 <?php include 'footer.php'; ?>
