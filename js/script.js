@@ -60,6 +60,7 @@ function theme_autocomplete(){
 
     var bgcolor = $("#bgcolor").val();
     $('#outerWrapper').css({"background-color": bgcolor });
+    $('#innerWrapper').css({"background-color": bgcolor });
 
     var titlecolor = $("#titlecolor").val();
     $('h1#blogtitle').css({"color": titlecolor });
