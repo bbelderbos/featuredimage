@@ -303,3 +303,11 @@ select#collection {
     height: 25px;
     margin-top: -6px;
 }
+#contact {                                                                                                                                      
+    position: absolute;
+    top: 12px;
+    left: 20px;
+}
+#homeLink {
+	padding-left: 28px;
+}

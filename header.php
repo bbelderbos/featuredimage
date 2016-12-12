@@ -22,5 +22,10 @@
 <body>
 <div class="overlay">
 
-<div id="aboutTxt"><h1><a href="<?php echo $appUrl; ?>" title="reset/ home"><?php echo $siteName; ?></a></h1></div>
+<div id="aboutTxt">
+  <h1>
+    <a id="contact" href="mailto:info@bobbelderbos.com?Subject=Featured%20Image%20Creator" title="contact developer"><img src="i/info.png"></a> 
+    <a id="homeLink" href="<?php echo $appUrl; ?>" title="reset/ home"><?php echo $siteName; ?></a> 
+  </h1>
+</div>
 <span style="display:none" id="coverImg"><?php // include "set_bg.php"; ?></span>
