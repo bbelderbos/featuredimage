@@ -23,4 +23,4 @@
 <div class="overlay">
 
 <div id="aboutTxt"><h1><a href="<?php echo $appUrl; ?>" title="reset/ home"><?php echo $siteName; ?></a></h1></div>
-<span style="display:none" id="coverImg"><?php include "set_bg.php"; ?></span>
+<span style="display:none" id="coverImg"><?php // include "set_bg.php"; ?></span>

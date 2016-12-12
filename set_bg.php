@@ -1,5 +1,5 @@
 <?php
-$basedir = "images/material-design";
+$basedir = "images/material";
 $bgImgArr = array();
 if ($handle = opendir($basedir)) {
     while (false !== ($entry = readdir($handle))) {

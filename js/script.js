@@ -31,10 +31,9 @@ function theme_autocomplete(){
 
 (function($){
 
-  // use diff bg images
-  var cover_url = $("#coverImg").text();
-
-  $('body').css({"background-image": "url("+cover_url+")" });
+  // use diff bg images ... nice, but takes up more bandwidth
+  // var cover_url = $("#coverImg").text();
+  // $('body').css({"background-image": "url("+cover_url+")" });
 
   // autofocus fields upon select
   $("input:text").focus(function() { $(this).select(); } );
