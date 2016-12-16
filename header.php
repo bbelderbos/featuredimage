@@ -24,7 +24,7 @@
 
 <div id="aboutTxt">
   <h1>
-    <a id="contact" href="http://bobbelderbos.com/2016/12/featured-image-creator/" title="more info tool / developer blog"><img src="i/info.png"></a> 
+    <a id="contact" href="http://bobbelderbos.com/2016/12/featured-image-creator/" title="more info tool / developer blog" target="_blank"><img src="i/info.png"></a> 
     <a id="homeLink" href="<?php echo $appUrl; ?>" title="reset/ home"><?php echo $siteName; ?></a> 
   </h1>
 </div>
