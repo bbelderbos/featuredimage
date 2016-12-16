@@ -28,9 +28,18 @@ function theme_autocomplete(){
   };
 }
 
+function openInNewTab(url) {
+    var win = window.open(url, '_blank');
+    win.focus();
+}
+
 
 (function($){
 
+  $("#share").hide()
+  if( window.location.href.includes("bgcolor=")){
+	$("#share").show()
+  }
   // use diff bg images ... nice, but takes up more bandwidth
   // var cover_url = $("#coverImg").text();
   // $('body').css({"background-image": "url("+cover_url+")" });
@@ -140,6 +149,15 @@ function theme_autocomplete(){
   $("#reset").click(function() {
 	  window.location.href = "/featured_image/";
 	  return false;
+  });
+
+  $("#share").click(function() {
+    var title = $("#title").val();
+    var url = "https://twitter.com/intent/tweet?text=New%20image:%20"
+    url += encodeURIComponent(title);	
+	url += "&hashtags=featuredimage,FeaturedImageCreator&url=" + encodeURIComponent(window.location.href); 
+	openInNewTab(url);
+	return false;
   });
 
   $("#setDimensions").submit(function(event){

@@ -40,9 +40,10 @@ include 'header.php';
         <div id='overlay'></div>
       </div>
     </div>
-	<input class="btn" type="submit" id="btnSave" value="Save image"/>
-	<input class="btn" type="submit" id="bookmark" value="Bookmark image"/>
-	<input class="btn" type="submit" id="reset" value="Start fresh"/>
+	<input class="btn" type="submit" id="reset" value="Reset"/>
+	<input class="btn" type="submit" id="share" value="Tweet"/>
+	<input class="btn" type="submit" id="bookmark" value="Bookmark"/>
+	<input class="btn" type="submit" id="btnSave" value="Save"/>
   </div> 
 </div>
 <?php include 'footer.php'; ?>
