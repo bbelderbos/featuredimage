@@ -153,10 +153,13 @@ function openInNewTab(url) {
 
   $("#share").click(function() {
     var title = $("#title").val();
-    var url = "https://twitter.com/intent/tweet?text=New%20image:%20"
-    url += encodeURIComponent(title);	
-	url += "&hashtags=featuredimage,FeaturedImageCreator&url=" + encodeURIComponent(window.location.href); 
-	openInNewTab(url);
+	var baseUrl = "http://projects.bobbelderbos.com/featured_image/?"
+	var formData = $('#addImage').serialize();
+    var shareUrl = "https://twitter.com/intent/tweet?text=New%20image:%20"
+    shareUrl += encodeURIComponent(title);	
+	shareUrl += "&hashtags=featuredimage,FeaturedImageCreator&url=";
+	shareUrl += encodeURIComponent(baseUrl + formData); 
+	openInNewTab(shareUrl);
 	return false;
   });
 
